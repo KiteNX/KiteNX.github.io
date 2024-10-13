@@ -1,124 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Butterfly主题使用及美化</title>
-    <url>/hyq/20873175.html</url>
-    <content><![CDATA[<p>hexo-theme-butterfly 是基于 <code>Molunerfinn</code> 的 <code>hexo-theme-melody</code> 的基础上进行开发的</p>
-<h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h3><blockquote>
-<p>直接通过npm来安装 </p>
-<p>仅支持Hexo 5.0.0及以上版本</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm i hexo-theme-butterfly</span><br></pre></td></tr></table></figure>
-
-<h3 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">hexo-theme-butterfly</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>如果有代码的需求 可以去 <code>node_modules</code> 里面找到 hexo-theme-butterfly 然后复制到 themes 文件夹里面</p>
-</blockquote>
-<h3 id="运行博客"><a href="#运行博客" class="headerlink" title="运行博客"></a>运行博客</h3><p>启动服务并访问<a href="https://link.zhihu.com/?target=http://localhost:4000/">http://localhost:4000</a>查看效果</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean </span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-
-
-<blockquote>
-<p>主题配置文件<code>themes/hexo-theme-butterfly/_config.yml</code></p>
-<p>站点配置文件 <code>博客项目名/_config.yml</code></p>
-</blockquote>
-<h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><blockquote>
-<p>如果你没有 pug 以及 stylus 的渲染器，请下载安装:</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus --save</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="站点配置"><a href="#站点配置" class="headerlink" title="站点配置"></a>站点配置</h3><p>切换主题语言</p>
-<p>修改<code>站点配置文件</code></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span></span><br></pre></td></tr></table></figure>
-
-<p>站点信息</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">君小南</span>  <span class="comment"># 标题</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">&#x27;自由一生是我全部的野心&#x27;</span>  <span class="comment"># 副标题</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">&#x27;时光不期而至，你我在此相遇&#x27;</span> <span class="comment"># 个性签名</span></span><br><span class="line"><span class="attr">keywords:</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">南浔</span>   <span class="comment"># 作者</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span>  <span class="comment"># 语言</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">&#x27;&#x27;</span>   <span class="comment"># 时区</span></span><br></pre></td></tr></table></figure>
-
-<p>生成文章唯一链接</p>
-<p>安装 hexo-abbrlink 插件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
-
-<p>在根目录 [项目名] 的配置文件 _config.yml 找到 permalink：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span></span><br><span class="line"><span class="comment">#修改为</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">post/:abbrlink.html</span> <span class="comment"># post为自定义前缀</span></span><br><span class="line"><span class="attr">abbrlink:</span></span><br><span class="line">	   <span class="attr">alg:</span> <span class="string">crc32</span>   <span class="comment"># 算法</span></span><br><span class="line">	   <span class="attr">rep:</span> <span class="string">hex</span>     <span class="comment"># 进制</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h3><p>菜单导航栏 </p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 目录</span></span><br><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="string">首页:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="string">归档:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-archive</span></span><br><span class="line">  <span class="string">标签:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="string">分类:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-folder-open</span></span><br><span class="line">  <span class="string">更多||fas</span> <span class="attr">fa-list:</span></span><br><span class="line">    <span class="attr">Music:</span> <span class="string">/music/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-music</span></span><br><span class="line">    <span class="attr">Movie:</span> <span class="string">/movies/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-video</span></span><br></pre></td></tr></table></figure>
-
-<p>字数统计</p>
-<blockquote>
-<p>安装统计插件</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-wordcount --save or yarn add hexo-wordcount</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>开启统计</p>
-</blockquote>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">wordcount:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">post_wordcount:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">min2read:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">total_wordcount:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<p>分享功能</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 分享</span></span><br><span class="line"><span class="attr">share:</span></span><br><span class="line">  <span class="comment"># Choose: sharejs / addtoany</span></span><br><span class="line">  <span class="comment"># Leave it empty if you don&#x27;t need share</span></span><br><span class="line">  <span class="attr">use:</span> <span class="string">sharejs</span>  </span><br><span class="line"></span><br><span class="line">  <span class="comment"># Share.js</span></span><br><span class="line">  <span class="comment"># https://github.com/overtrue/share.js</span></span><br><span class="line">  <span class="attr">sharejs:</span></span><br><span class="line">    <span class="attr">sites:</span> <span class="string">facebook,twitter,wechat,weibo,qq</span>   <span class="comment">#想要显示的内容</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># AddToAny</span></span><br><span class="line">  <span class="comment"># https://www.addtoany.com/</span></span><br><span class="line">  <span class="attr">addtoany:</span></span><br><span class="line">    <span class="attr">item:</span> <span class="string">facebook,twitter,wechat,sina_weibo,facebook_messenger,email,copy_link</span></span><br></pre></td></tr></table></figure>
-
-<p>鼠标点击特效</p>
-<blockquote>
-<p>enable 设置成 true 就可以</p>
-</blockquote>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 烟花特效</span></span><br><span class="line"><span class="attr">fireworks:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">zIndex:</span> <span class="number">9999</span></span><br><span class="line">  <span class="attr">mobile:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 点击出现爱心</span></span><br><span class="line"><span class="attr">click_heart:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">mobile:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 鼠标点击效果文字</span></span><br><span class="line"><span class="attr">clickShowText:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">text:</span></span><br><span class="line">    <span class="comment"># - I</span></span><br><span class="line">    <span class="comment"># - LOVE</span></span><br><span class="line">    <span class="comment"># - YOU</span></span><br><span class="line">  <span class="attr">fontSize:</span> <span class="string">15px</span></span><br><span class="line">  <span class="attr">random:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">mobile:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-
-<p>背景特效</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 静态彩带</span></span><br><span class="line"><span class="attr">canvas_ribbon:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">size:</span> <span class="number">150</span></span><br><span class="line">  <span class="attr">alpha:</span> <span class="number">0.6</span></span><br><span class="line">  <span class="attr">zIndex:</span> <span class="number">-1</span></span><br><span class="line">  <span class="attr">click_to_change:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">mobile:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 动态彩带</span></span><br><span class="line"><span class="attr">canvas_fluttering_ribbon:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">mobile:</span> <span class="literal">false</span> <span class="comment"># false 手机端不显示 true 手机端显示</span></span><br></pre></td></tr></table></figure>
-
-<p>添加看板娘</p>
-<blockquote>
-<p>安装插件</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>通过npm下载对应的模型</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install live2d-widget-model-tororo <span class="comment">#对应的模型</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>配置里面添加</p>
-</blockquote>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 看板娘</span></span><br><span class="line"><span class="attr">live2d:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span> <span class="comment">#是否显示看板娘</span></span><br><span class="line">    <span class="attr">scriptFrom:</span> <span class="string">local</span></span><br><span class="line">    <span class="attr">model:</span></span><br><span class="line">        <span class="attr">use:</span> <span class="string">live2d-widget-model-tororo</span> <span class="comment">#需要与前面安装的模型名称相同，直接更换名字即可</span></span><br><span class="line">    <span class="attr">display:</span></span><br><span class="line">        <span class="attr">position:</span> <span class="string">left</span> <span class="comment">#宽高以及位置自己看着调</span></span><br><span class="line">        <span class="attr">width:</span> <span class="number">200</span></span><br><span class="line">        <span class="attr">height:</span> <span class="number">300</span></span><br><span class="line">    <span class="attr">mobile:</span></span><br><span class="line">        <span class="attr">show:</span> <span class="literal">true</span> <span class="comment">#是否在手机进行显示</span></span><br></pre></td></tr></table></figure>
-
-<p>更多模型</p>
-<figure class="highlight http"><table><tr><td class="code"><pre><span class="line">https://blog.csdn.net/wang_123_zy/article/details/87181892</span><br></pre></td></tr></table></figure>
-
-<p>页脚渐变</p>
-<blockquote>
-<p> 新建  source&#x2F;css&#x2F;footer.css</p>
-</blockquote>
-<p>footer.css</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 页脚footer */</span></span><br><span class="line"><span class="comment">/* 渐变色滚动动画 */</span></span><br><span class="line"><span class="keyword">@-webkit-keyframes</span> Gradient &#123;</span><br><span class="line">    <span class="number">0%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">50%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">100%</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">100%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@-moz-keyframes</span> Gradient &#123;</span><br><span class="line">    <span class="number">0%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">50%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">100%</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">100%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@keyframes</span> Gradient &#123;</span><br><span class="line">    <span class="number">0%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">50%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">100%</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">100%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#footer</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(-<span class="number">45deg</span>, <span class="number">#ee7752</span>, <span class="number">#ce3e75</span>, <span class="number">#23a6d5</span>, <span class="number">#23d5ab</span>);</span><br><span class="line">    <span class="attribute">background-size</span>: <span class="number">400%</span> <span class="number">400%</span>;</span><br><span class="line">    -webkit-<span class="attribute">animation</span>: Gradient <span class="number">10s</span> ease infinite;</span><br><span class="line">    -moz-<span class="attribute">animation</span>: Gradient <span class="number">10s</span> ease infinite;</span><br><span class="line">    <span class="attribute">animation</span>: Gradient <span class="number">10s</span> ease infinite;</span><br><span class="line">    -o-user-<span class="selector-tag">select</span>: none;</span><br><span class="line">    -ms-user-<span class="selector-tag">select</span>: none;</span><br><span class="line">    -webkit-user-<span class="selector-tag">select</span>: none;</span><br><span class="line">    -moz-user-<span class="selector-tag">select</span>: none;</span><br><span class="line">    user-<span class="selector-tag">select</span>: none;</span><br><span class="line">    <span class="attribute">border-top-left-radius</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">border-top-right-radius</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#footer</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>修改配置文件</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 插入代码到头部 &lt;/head&gt; 之前 和 底部 &lt;/body&gt; 之前</span></span><br><span class="line"><span class="attr">inject:</span></span><br><span class="line">  <span class="attr">head:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/css/footer.css&quot;&gt;</span>  <span class="comment"># 渐变页脚</span></span><br><span class="line">  <span class="attr">bottom:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&#x27;&lt;div class=&quot;aplayer no-destroy&quot; data-id=&quot;464916877&quot; data-server=&quot;netease&quot; data-type=&quot;song&quot; data-fixed=&quot;true&quot; data-autoplay=&quot;true&quot;&gt; &lt;/div&gt;&#x27;</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Butterfly</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Butterfly的Front-matter</title>
     <url>/hyq/c3e8be4f.html</url>
     <content><![CDATA[<p>Front-matter</p>
@@ -261,25 +143,122 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/hyq/4a17b156.html</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <title>Butterfly主题使用及美化</title>
+    <url>/hyq/20873175.html</url>
+    <content><![CDATA[<p>hexo-theme-butterfly 是基于 <code>Molunerfinn</code> 的 <code>hexo-theme-melody</code> 的基础上进行开发的</p>
+<h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h3><blockquote>
+<p>直接通过npm来安装 </p>
+<p>仅支持Hexo 5.0.0及以上版本</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm i hexo-theme-butterfly</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">hexo-theme-butterfly</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>如果有代码的需求 可以去 <code>node_modules</code> 里面找到 hexo-theme-butterfly 然后复制到 themes 文件夹里面</p>
+</blockquote>
+<h3 id="运行博客"><a href="#运行博客" class="headerlink" title="运行博客"></a>运行博客</h3><p>启动服务并访问<a href="https://link.zhihu.com/?target=http://localhost:4000/">http://localhost:4000</a>查看效果</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean </span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+<blockquote>
+<p>主题配置文件<code>themes/hexo-theme-butterfly/_config.yml</code></p>
+<p>站点配置文件 <code>博客项目名/_config.yml</code></p>
+</blockquote>
+<h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><blockquote>
+<p>如果你没有 pug 以及 stylus 的渲染器，请下载安装:</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus --save</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="站点配置"><a href="#站点配置" class="headerlink" title="站点配置"></a>站点配置</h3><p>切换主题语言</p>
+<p>修改<code>站点配置文件</code></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span></span><br></pre></td></tr></table></figure>
+
+<p>站点信息</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">君小南</span>  <span class="comment"># 标题</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">&#x27;自由一生是我全部的野心&#x27;</span>  <span class="comment"># 副标题</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">&#x27;时光不期而至，你我在此相遇&#x27;</span> <span class="comment"># 个性签名</span></span><br><span class="line"><span class="attr">keywords:</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">南浔</span>   <span class="comment"># 作者</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span>  <span class="comment"># 语言</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">&#x27;&#x27;</span>   <span class="comment"># 时区</span></span><br></pre></td></tr></table></figure>
+
+<p>生成文章唯一链接</p>
+<p>安装 hexo-abbrlink 插件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
+
+<p>在根目录 [项目名] 的配置文件 _config.yml 找到 permalink：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span></span><br><span class="line"><span class="comment">#修改为</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">post/:abbrlink.html</span> <span class="comment"># post为自定义前缀</span></span><br><span class="line"><span class="attr">abbrlink:</span></span><br><span class="line">	   <span class="attr">alg:</span> <span class="string">crc32</span>   <span class="comment"># 算法</span></span><br><span class="line">	   <span class="attr">rep:</span> <span class="string">hex</span>     <span class="comment"># 进制</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h3><p>菜单导航栏 </p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 目录</span></span><br><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="string">首页:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="string">归档:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-archive</span></span><br><span class="line">  <span class="string">标签:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="string">分类:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-folder-open</span></span><br><span class="line">  <span class="string">更多||fas</span> <span class="attr">fa-list:</span></span><br><span class="line">    <span class="attr">Music:</span> <span class="string">/music/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-music</span></span><br><span class="line">    <span class="attr">Movie:</span> <span class="string">/movies/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-video</span></span><br></pre></td></tr></table></figure>
+
+<p>字数统计</p>
+<blockquote>
+<p>安装统计插件</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-wordcount --save or yarn add hexo-wordcount</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>开启统计</p>
+</blockquote>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">wordcount:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">post_wordcount:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">min2read:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">total_wordcount:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>分享功能</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 分享</span></span><br><span class="line"><span class="attr">share:</span></span><br><span class="line">  <span class="comment"># Choose: sharejs / addtoany</span></span><br><span class="line">  <span class="comment"># Leave it empty if you don&#x27;t need share</span></span><br><span class="line">  <span class="attr">use:</span> <span class="string">sharejs</span>  </span><br><span class="line"></span><br><span class="line">  <span class="comment"># Share.js</span></span><br><span class="line">  <span class="comment"># https://github.com/overtrue/share.js</span></span><br><span class="line">  <span class="attr">sharejs:</span></span><br><span class="line">    <span class="attr">sites:</span> <span class="string">facebook,twitter,wechat,weibo,qq</span>   <span class="comment">#想要显示的内容</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># AddToAny</span></span><br><span class="line">  <span class="comment"># https://www.addtoany.com/</span></span><br><span class="line">  <span class="attr">addtoany:</span></span><br><span class="line">    <span class="attr">item:</span> <span class="string">facebook,twitter,wechat,sina_weibo,facebook_messenger,email,copy_link</span></span><br></pre></td></tr></table></figure>
+
+<p>鼠标点击特效</p>
+<blockquote>
+<p>enable 设置成 true 就可以</p>
+</blockquote>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 烟花特效</span></span><br><span class="line"><span class="attr">fireworks:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">zIndex:</span> <span class="number">9999</span></span><br><span class="line">  <span class="attr">mobile:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 点击出现爱心</span></span><br><span class="line"><span class="attr">click_heart:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">mobile:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 鼠标点击效果文字</span></span><br><span class="line"><span class="attr">clickShowText:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">text:</span></span><br><span class="line">    <span class="comment"># - I</span></span><br><span class="line">    <span class="comment"># - LOVE</span></span><br><span class="line">    <span class="comment"># - YOU</span></span><br><span class="line">  <span class="attr">fontSize:</span> <span class="string">15px</span></span><br><span class="line">  <span class="attr">random:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">mobile:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<p>背景特效</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 静态彩带</span></span><br><span class="line"><span class="attr">canvas_ribbon:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">size:</span> <span class="number">150</span></span><br><span class="line">  <span class="attr">alpha:</span> <span class="number">0.6</span></span><br><span class="line">  <span class="attr">zIndex:</span> <span class="number">-1</span></span><br><span class="line">  <span class="attr">click_to_change:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">mobile:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 动态彩带</span></span><br><span class="line"><span class="attr">canvas_fluttering_ribbon:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">mobile:</span> <span class="literal">false</span> <span class="comment"># false 手机端不显示 true 手机端显示</span></span><br></pre></td></tr></table></figure>
+
+<p>添加看板娘</p>
+<blockquote>
+<p>安装插件</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>通过npm下载对应的模型</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install live2d-widget-model-tororo <span class="comment">#对应的模型</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>配置里面添加</p>
+</blockquote>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 看板娘</span></span><br><span class="line"><span class="attr">live2d:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span> <span class="comment">#是否显示看板娘</span></span><br><span class="line">    <span class="attr">scriptFrom:</span> <span class="string">local</span></span><br><span class="line">    <span class="attr">model:</span></span><br><span class="line">        <span class="attr">use:</span> <span class="string">live2d-widget-model-tororo</span> <span class="comment">#需要与前面安装的模型名称相同，直接更换名字即可</span></span><br><span class="line">    <span class="attr">display:</span></span><br><span class="line">        <span class="attr">position:</span> <span class="string">left</span> <span class="comment">#宽高以及位置自己看着调</span></span><br><span class="line">        <span class="attr">width:</span> <span class="number">200</span></span><br><span class="line">        <span class="attr">height:</span> <span class="number">300</span></span><br><span class="line">    <span class="attr">mobile:</span></span><br><span class="line">        <span class="attr">show:</span> <span class="literal">true</span> <span class="comment">#是否在手机进行显示</span></span><br></pre></td></tr></table></figure>
+
+<p>更多模型</p>
+<figure class="highlight http"><table><tr><td class="code"><pre><span class="line">https://blog.csdn.net/wang_123_zy/article/details/87181892</span><br></pre></td></tr></table></figure>
+
+<p>页脚渐变</p>
+<blockquote>
+<p> 新建  source&#x2F;css&#x2F;footer.css</p>
+</blockquote>
+<p>footer.css</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 页脚footer */</span></span><br><span class="line"><span class="comment">/* 渐变色滚动动画 */</span></span><br><span class="line"><span class="keyword">@-webkit-keyframes</span> Gradient &#123;</span><br><span class="line">    <span class="number">0%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">50%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">100%</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">100%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@-moz-keyframes</span> Gradient &#123;</span><br><span class="line">    <span class="number">0%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">50%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">100%</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">100%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@keyframes</span> Gradient &#123;</span><br><span class="line">    <span class="number">0%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">50%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">100%</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">100%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#footer</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(-<span class="number">45deg</span>, <span class="number">#ee7752</span>, <span class="number">#ce3e75</span>, <span class="number">#23a6d5</span>, <span class="number">#23d5ab</span>);</span><br><span class="line">    <span class="attribute">background-size</span>: <span class="number">400%</span> <span class="number">400%</span>;</span><br><span class="line">    -webkit-<span class="attribute">animation</span>: Gradient <span class="number">10s</span> ease infinite;</span><br><span class="line">    -moz-<span class="attribute">animation</span>: Gradient <span class="number">10s</span> ease infinite;</span><br><span class="line">    <span class="attribute">animation</span>: Gradient <span class="number">10s</span> ease infinite;</span><br><span class="line">    -o-user-<span class="selector-tag">select</span>: none;</span><br><span class="line">    -ms-user-<span class="selector-tag">select</span>: none;</span><br><span class="line">    -webkit-user-<span class="selector-tag">select</span>: none;</span><br><span class="line">    -moz-user-<span class="selector-tag">select</span>: none;</span><br><span class="line">    user-<span class="selector-tag">select</span>: none;</span><br><span class="line">    <span class="attribute">border-top-left-radius</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">border-top-right-radius</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#footer</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>修改配置文件</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 插入代码到头部 &lt;/head&gt; 之前 和 底部 &lt;/body&gt; 之前</span></span><br><span class="line"><span class="attr">inject:</span></span><br><span class="line">  <span class="attr">head:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/css/footer.css&quot;&gt;</span>  <span class="comment"># 渐变页脚</span></span><br><span class="line">  <span class="attr">bottom:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&#x27;&lt;div class=&quot;aplayer no-destroy&quot; data-id=&quot;464916877&quot; data-server=&quot;netease&quot; data-type=&quot;song&quot; data-fixed=&quot;true&quot; data-autoplay=&quot;true&quot;&gt; &lt;/div&gt;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
 ]]></content>
       <categories>
         <category>Hexo</category>
       </categories>
+      <tags>
+        <tag>Butterfly</tag>
+      </tags>
   </entry>
   <entry>
     <title>Butterfly的三个特殊menu</title>
@@ -321,5 +300,26 @@
       <tags>
         <tag>Butterfly</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/hyq/4a17b156.html</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
   </entry>
 </search>
