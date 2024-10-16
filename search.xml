@@ -1,324 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>Butterfly主题使用及美化</title>
-    <url>/hyq/20873175.html</url>
-    <content><![CDATA[<p>hexo-theme-butterfly 是基于 <code>Molunerfinn</code> 的 <code>hexo-theme-melody</code> 的基础上进行开发的</p>
-<h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h3><blockquote>
-<p>直接通过npm来安装 </p>
-<p>仅支持Hexo 5.0.0及以上版本</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm i hexo-theme-butterfly</span><br></pre></td></tr></table></figure>
-
-<h3 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">hexo-theme-butterfly</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>如果有代码的需求 可以去 <code>node_modules</code> 里面找到 hexo-theme-butterfly 然后复制到 themes 文件夹里面</p>
-</blockquote>
-<h3 id="运行博客"><a href="#运行博客" class="headerlink" title="运行博客"></a>运行博客</h3><p>启动服务并访问<a href="https://link.zhihu.com/?target=http://localhost:4000/">http://localhost:4000</a>查看效果</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean </span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-
-
-<blockquote>
-<p>主题配置文件<code>themes/hexo-theme-butterfly/_config.yml</code></p>
-<p>站点配置文件 <code>博客项目名/_config.yml</code></p>
-</blockquote>
-<h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><blockquote>
-<p>如果你没有 pug 以及 stylus 的渲染器，请下载安装:</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus --save</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="站点配置"><a href="#站点配置" class="headerlink" title="站点配置"></a>站点配置</h3><p>切换主题语言</p>
-<p>修改<code>站点配置文件</code></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span></span><br></pre></td></tr></table></figure>
-
-<p>站点信息</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">君小南</span>  <span class="comment"># 标题</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">&#x27;自由一生是我全部的野心&#x27;</span>  <span class="comment"># 副标题</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">&#x27;时光不期而至，你我在此相遇&#x27;</span> <span class="comment"># 个性签名</span></span><br><span class="line"><span class="attr">keywords:</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">南浔</span>   <span class="comment"># 作者</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span>  <span class="comment"># 语言</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">&#x27;&#x27;</span>   <span class="comment"># 时区</span></span><br></pre></td></tr></table></figure>
-
-<p>生成文章唯一链接</p>
-<p>安装 hexo-abbrlink 插件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
-
-<p>在根目录 [项目名] 的配置文件 _config.yml 找到 permalink：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span></span><br><span class="line"><span class="comment">#修改为</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">post/:abbrlink.html</span> <span class="comment"># post为自定义前缀</span></span><br><span class="line"><span class="attr">abbrlink:</span></span><br><span class="line">	   <span class="attr">alg:</span> <span class="string">crc32</span>   <span class="comment"># 算法</span></span><br><span class="line">	   <span class="attr">rep:</span> <span class="string">hex</span>     <span class="comment"># 进制</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h3><p>菜单导航栏 </p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 目录</span></span><br><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="string">首页:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="string">归档:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-archive</span></span><br><span class="line">  <span class="string">标签:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="string">分类:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-folder-open</span></span><br><span class="line">  <span class="string">更多||fas</span> <span class="attr">fa-list:</span></span><br><span class="line">    <span class="attr">Music:</span> <span class="string">/music/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-music</span></span><br><span class="line">    <span class="attr">Movie:</span> <span class="string">/movies/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-video</span></span><br></pre></td></tr></table></figure>
-
-<p>字数统计</p>
-<blockquote>
-<p>安装统计插件</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-wordcount --save or yarn add hexo-wordcount</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>开启统计</p>
-</blockquote>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">wordcount:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">post_wordcount:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">min2read:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">total_wordcount:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<p>分享功能</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 分享</span></span><br><span class="line"><span class="attr">share:</span></span><br><span class="line">  <span class="comment"># Choose: sharejs / addtoany</span></span><br><span class="line">  <span class="comment"># Leave it empty if you don&#x27;t need share</span></span><br><span class="line">  <span class="attr">use:</span> <span class="string">sharejs</span>  </span><br><span class="line"></span><br><span class="line">  <span class="comment"># Share.js</span></span><br><span class="line">  <span class="comment"># https://github.com/overtrue/share.js</span></span><br><span class="line">  <span class="attr">sharejs:</span></span><br><span class="line">    <span class="attr">sites:</span> <span class="string">facebook,twitter,wechat,weibo,qq</span>   <span class="comment">#想要显示的内容</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># AddToAny</span></span><br><span class="line">  <span class="comment"># https://www.addtoany.com/</span></span><br><span class="line">  <span class="attr">addtoany:</span></span><br><span class="line">    <span class="attr">item:</span> <span class="string">facebook,twitter,wechat,sina_weibo,facebook_messenger,email,copy_link</span></span><br></pre></td></tr></table></figure>
-
-<p>鼠标点击特效</p>
-<blockquote>
-<p>enable 设置成 true 就可以</p>
-</blockquote>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 烟花特效</span></span><br><span class="line"><span class="attr">fireworks:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">zIndex:</span> <span class="number">9999</span></span><br><span class="line">  <span class="attr">mobile:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 点击出现爱心</span></span><br><span class="line"><span class="attr">click_heart:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">mobile:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 鼠标点击效果文字</span></span><br><span class="line"><span class="attr">clickShowText:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">text:</span></span><br><span class="line">    <span class="comment"># - I</span></span><br><span class="line">    <span class="comment"># - LOVE</span></span><br><span class="line">    <span class="comment"># - YOU</span></span><br><span class="line">  <span class="attr">fontSize:</span> <span class="string">15px</span></span><br><span class="line">  <span class="attr">random:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">mobile:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-
-<p>背景特效</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 静态彩带</span></span><br><span class="line"><span class="attr">canvas_ribbon:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">size:</span> <span class="number">150</span></span><br><span class="line">  <span class="attr">alpha:</span> <span class="number">0.6</span></span><br><span class="line">  <span class="attr">zIndex:</span> <span class="number">-1</span></span><br><span class="line">  <span class="attr">click_to_change:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">mobile:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 动态彩带</span></span><br><span class="line"><span class="attr">canvas_fluttering_ribbon:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">mobile:</span> <span class="literal">false</span> <span class="comment"># false 手机端不显示 true 手机端显示</span></span><br></pre></td></tr></table></figure>
-
-<p>添加看板娘</p>
-<blockquote>
-<p>安装插件</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>通过npm下载对应的模型</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install live2d-widget-model-tororo <span class="comment">#对应的模型</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>配置里面添加</p>
-</blockquote>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 看板娘</span></span><br><span class="line"><span class="attr">live2d:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span> <span class="comment">#是否显示看板娘</span></span><br><span class="line">    <span class="attr">scriptFrom:</span> <span class="string">local</span></span><br><span class="line">    <span class="attr">model:</span></span><br><span class="line">        <span class="attr">use:</span> <span class="string">live2d-widget-model-tororo</span> <span class="comment">#需要与前面安装的模型名称相同，直接更换名字即可</span></span><br><span class="line">    <span class="attr">display:</span></span><br><span class="line">        <span class="attr">position:</span> <span class="string">left</span> <span class="comment">#宽高以及位置自己看着调</span></span><br><span class="line">        <span class="attr">width:</span> <span class="number">200</span></span><br><span class="line">        <span class="attr">height:</span> <span class="number">300</span></span><br><span class="line">    <span class="attr">mobile:</span></span><br><span class="line">        <span class="attr">show:</span> <span class="literal">true</span> <span class="comment">#是否在手机进行显示</span></span><br></pre></td></tr></table></figure>
-
-<p>更多模型</p>
-<figure class="highlight http"><table><tr><td class="code"><pre><span class="line">https://blog.csdn.net/wang_123_zy/article/details/87181892</span><br></pre></td></tr></table></figure>
-
-<p>页脚渐变</p>
-<blockquote>
-<p> 新建  source&#x2F;css&#x2F;footer.css</p>
-</blockquote>
-<p>footer.css</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 页脚footer */</span></span><br><span class="line"><span class="comment">/* 渐变色滚动动画 */</span></span><br><span class="line"><span class="keyword">@-webkit-keyframes</span> Gradient &#123;</span><br><span class="line">    <span class="number">0%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">50%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">100%</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">100%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@-moz-keyframes</span> Gradient &#123;</span><br><span class="line">    <span class="number">0%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">50%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">100%</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">100%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@keyframes</span> Gradient &#123;</span><br><span class="line">    <span class="number">0%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">50%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">100%</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">100%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#footer</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(-<span class="number">45deg</span>, <span class="number">#ee7752</span>, <span class="number">#ce3e75</span>, <span class="number">#23a6d5</span>, <span class="number">#23d5ab</span>);</span><br><span class="line">    <span class="attribute">background-size</span>: <span class="number">400%</span> <span class="number">400%</span>;</span><br><span class="line">    -webkit-<span class="attribute">animation</span>: Gradient <span class="number">10s</span> ease infinite;</span><br><span class="line">    -moz-<span class="attribute">animation</span>: Gradient <span class="number">10s</span> ease infinite;</span><br><span class="line">    <span class="attribute">animation</span>: Gradient <span class="number">10s</span> ease infinite;</span><br><span class="line">    -o-user-<span class="selector-tag">select</span>: none;</span><br><span class="line">    -ms-user-<span class="selector-tag">select</span>: none;</span><br><span class="line">    -webkit-user-<span class="selector-tag">select</span>: none;</span><br><span class="line">    -moz-user-<span class="selector-tag">select</span>: none;</span><br><span class="line">    user-<span class="selector-tag">select</span>: none;</span><br><span class="line">    <span class="attribute">border-top-left-radius</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">border-top-right-radius</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#footer</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>修改配置文件</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 插入代码到头部 &lt;/head&gt; 之前 和 底部 &lt;/body&gt; 之前</span></span><br><span class="line"><span class="attr">inject:</span></span><br><span class="line">  <span class="attr">head:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/css/footer.css&quot;&gt;</span>  <span class="comment"># 渐变页脚</span></span><br><span class="line">  <span class="attr">bottom:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&#x27;&lt;div class=&quot;aplayer no-destroy&quot; data-id=&quot;464916877&quot; data-server=&quot;netease&quot; data-type=&quot;song&quot; data-fixed=&quot;true&quot; data-autoplay=&quot;true&quot;&gt; &lt;/div&gt;&#x27;</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-]]></content>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Butterfly的三个特殊menu</title>
+      <link href="/hyq/4612a9d4.html"/>
+      <url>/hyq/4612a9d4.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>三个 Page Front-matter【必需】要配置 type 的 (标签、分类、友链)</p></blockquote><h3 id="tags标签页"><a href="#tags标签页" class="headerlink" title="tags标签页"></a>tags标签页</h3><p>创建</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure><p>&#x2F;tags&#x2F;index.md 配置</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: tags</span><br><span class="line">date: 2024-10-13 17:30:47</span><br><span class="line">type: &quot;tags&quot;</span><br></pre></td></tr></table></figure><blockquote><p>type 类型必须为 tags</p></blockquote><h3 id="categories分类页"><a href="#categories分类页" class="headerlink" title="categories分类页"></a>categories分类页</h3><p>创建</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure><p>&#x2F;categories&#x2F;index.md 配置</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: categories</span><br><span class="line">date: 2024-10-13 16:46:30</span><br><span class="line">type: &quot;categories&quot;</span><br></pre></td></tr></table></figure><blockquote><p>type 类型必须为 categories</p></blockquote><h3 id="link友链页"><a href="#link友链页" class="headerlink" title="link友链页"></a>link友链页</h3><p>创建</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page <span class="built_in">link</span></span><br></pre></td></tr></table></figure><p>&#x2F;link&#x2F;index.md 配置</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: link</span><br><span class="line">date: 2024-10-12 23:20:38</span><br><span class="line">type: &quot;link&quot;</span><br></pre></td></tr></table></figure><blockquote><p>type 类型必须为 link</p></blockquote>]]></content>
+      
+      
       <categories>
-        <category>Hexo</category>
+          
+          <category> Hexo </category>
+          
       </categories>
-      <tags>
-        <tag>Butterfly</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/hyq/4a17b156.html</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> Butterfly </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Butterfly的Front-matter</title>
+      <link href="/hyq/c3e8be4f.html"/>
+      <url>/hyq/c3e8be4f.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a>Front-matter</h3><blockquote><p>Page Front-matter 用于页面配置</p></blockquote><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">title:</span><br><span class="line">date:</span><br><span class="line">updated:</span><br><span class="line">type:</span><br><span class="line">comments:</span><br><span class="line">description:</span><br><span class="line">keywords:</span><br><span class="line">top<span class="emphasis">_img:</span></span><br><span class="line"><span class="emphasis">mathjax:</span></span><br><span class="line"><span class="emphasis">katex:</span></span><br><span class="line"><span class="emphasis">aside:</span></span><br><span class="line"><span class="emphasis">aplayer:</span></span><br><span class="line"><span class="emphasis">highlight_</span>shrink:</span><br></pre></td></tr></table></figure><table><thead><tr><th>key</th><th>value</th></tr></thead><tbody><tr><td>title</td><td>标题</td></tr><tr><td>date</td><td>创建日期</td></tr><tr><td>updated</td><td>更新日期</td></tr><tr><td>type</td><td>标签、分类和友情链接三个页面需要配置</td></tr><tr><td>comments</td><td>评论</td></tr><tr><td>description</td><td>描述</td></tr><tr><td>keywords</td><td>关键字</td></tr><tr><td>top_img</td><td>顶部图片</td></tr><tr><td>mathjax</td><td>显示mathjax</td></tr><tr><td>katex</td><td>显示katex</td></tr><tr><td>aside</td><td>侧边栏</td></tr><tr><td>aplayer</td><td>需要 js和css</td></tr><tr><td>highlight_shrink</td><td>代码框是否展开</td></tr></tbody></table><blockquote><p>Post Front-matter 用于文章页配置</p></blockquote><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">title:</span><br><span class="line">date:</span><br><span class="line">updated:</span><br><span class="line">tags:</span><br><span class="line">categories:</span><br><span class="line">keywords:</span><br><span class="line">description:</span><br><span class="line">top<span class="emphasis">_img:</span></span><br><span class="line"><span class="emphasis">comments:</span></span><br><span class="line"><span class="emphasis">cover:</span></span><br><span class="line"><span class="emphasis">toc:</span></span><br><span class="line"><span class="emphasis">copyright:</span></span><br><span class="line"><span class="emphasis">copyright_</span>author:</span><br></pre></td></tr></table></figure><table><thead><tr><th>key</th><th>value</th></tr></thead><tbody><tr><td>title</td><td>标题</td></tr><tr><td>date</td><td>创建日期</td></tr><tr><td>updated</td><td>更新日期</td></tr><tr><td>tags</td><td>标签</td></tr><tr><td>categories</td><td>分类</td></tr><tr><td>description</td><td>描述</td></tr><tr><td>keywords</td><td>关键字</td></tr><tr><td>top_img</td><td>顶部图片</td></tr><tr><td>cover</td><td>缩略图&#x2F;文章封面</td></tr><tr><td>comments</td><td>评论</td></tr><tr><td>toc</td><td>默认主题配置中的</td></tr><tr><td>copyright</td><td>版权</td></tr><tr><td>copyright_author</td><td>作者</td></tr></tbody></table>]]></content>
+      
+      
       <categories>
-        <category>Hexo</category>
+          
+          <category> Hexo </category>
+          
       </categories>
-  </entry>
-  <entry>
-    <title>Butterfly的Front-matter</title>
-    <url>/hyq/c3e8be4f.html</url>
-    <content><![CDATA[<h3 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a>Front-matter</h3><blockquote>
-<p>Page Front-matter 用于页面配置</p>
-</blockquote>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">title:</span><br><span class="line">date:</span><br><span class="line">updated:</span><br><span class="line">type:</span><br><span class="line">comments:</span><br><span class="line">description:</span><br><span class="line">keywords:</span><br><span class="line">top<span class="emphasis">_img:</span></span><br><span class="line"><span class="emphasis">mathjax:</span></span><br><span class="line"><span class="emphasis">katex:</span></span><br><span class="line"><span class="emphasis">aside:</span></span><br><span class="line"><span class="emphasis">aplayer:</span></span><br><span class="line"><span class="emphasis">highlight_</span>shrink:</span><br></pre></td></tr></table></figure>
-
-<table>
-<thead>
-<tr>
-<th>key</th>
-<th>value</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>title</td>
-<td>标题</td>
-</tr>
-<tr>
-<td>date</td>
-<td>创建日期</td>
-</tr>
-<tr>
-<td>updated</td>
-<td>更新日期</td>
-</tr>
-<tr>
-<td>type</td>
-<td>标签、分类和友情链接三个页面需要配置</td>
-</tr>
-<tr>
-<td>comments</td>
-<td>评论</td>
-</tr>
-<tr>
-<td>description</td>
-<td>描述</td>
-</tr>
-<tr>
-<td>keywords</td>
-<td>关键字</td>
-</tr>
-<tr>
-<td>top_img</td>
-<td>顶部图片</td>
-</tr>
-<tr>
-<td>mathjax</td>
-<td>显示mathjax</td>
-</tr>
-<tr>
-<td>katex</td>
-<td>显示katex</td>
-</tr>
-<tr>
-<td>aside</td>
-<td>侧边栏</td>
-</tr>
-<tr>
-<td>aplayer</td>
-<td>需要 js和css</td>
-</tr>
-<tr>
-<td>highlight_shrink</td>
-<td>代码框是否展开</td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>Post Front-matter 用于文章页配置</p>
-</blockquote>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">title:</span><br><span class="line">date:</span><br><span class="line">updated:</span><br><span class="line">tags:</span><br><span class="line">categories:</span><br><span class="line">keywords:</span><br><span class="line">description:</span><br><span class="line">top<span class="emphasis">_img:</span></span><br><span class="line"><span class="emphasis">comments:</span></span><br><span class="line"><span class="emphasis">cover:</span></span><br><span class="line"><span class="emphasis">toc:</span></span><br><span class="line"><span class="emphasis">copyright:</span></span><br><span class="line"><span class="emphasis">copyright_</span>author:</span><br></pre></td></tr></table></figure>
-
-<table>
-<thead>
-<tr>
-<th>key</th>
-<th>value</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>title</td>
-<td>标题</td>
-</tr>
-<tr>
-<td>date</td>
-<td>创建日期</td>
-</tr>
-<tr>
-<td>updated</td>
-<td>更新日期</td>
-</tr>
-<tr>
-<td>tags</td>
-<td>标签</td>
-</tr>
-<tr>
-<td>categories</td>
-<td>分类</td>
-</tr>
-<tr>
-<td>description</td>
-<td>描述</td>
-</tr>
-<tr>
-<td>keywords</td>
-<td>关键字</td>
-</tr>
-<tr>
-<td>top_img</td>
-<td>顶部图片</td>
-</tr>
-<tr>
-<td>cover</td>
-<td>缩略图&#x2F;文章封面</td>
-</tr>
-<tr>
-<td>comments</td>
-<td>评论</td>
-</tr>
-<tr>
-<td>toc</td>
-<td>默认主题配置中的</td>
-</tr>
-<tr>
-<td>copyright</td>
-<td>版权</td>
-</tr>
-<tr>
-<td>copyright_author</td>
-<td>作者</td>
-</tr>
-</tbody></table>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> Butterfly </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Butterfly主题使用及美化</title>
+      <link href="/hyq/20873175.html"/>
+      <url>/hyq/20873175.html</url>
+      
+        <content type="html"><![CDATA[<p>hexo-theme-butterfly 是基于 <code>Molunerfinn</code> 的 <code>hexo-theme-melody</code> 的基础上进行开发的</p><h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h3><blockquote><p>直接通过npm来安装 </p><p>仅支持Hexo 5.0.0及以上版本</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo-theme-butterfly</span><br></pre></td></tr></table></figure><h3 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">hexo-theme-butterfly</span></span><br></pre></td></tr></table></figure><blockquote><p>如果有代码的需求 可以去 <code>node_modules</code> 里面找到 hexo-theme-butterfly 然后复制到 themes 文件夹里面</p></blockquote><h3 id="运行博客"><a href="#运行博客" class="headerlink" title="运行博客"></a>运行博客</h3><p>启动服务并访问<a href="https://link.zhihu.com/?target=http://localhost:4000/">http://localhost:4000</a>查看效果</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean </span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure><blockquote><p>主题配置文件<code>themes/hexo-theme-butterfly/_config.yml</code></p><p>站点配置文件 <code>博客项目名/_config.yml</code></p></blockquote><h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><blockquote><p>如果你没有 pug 以及 stylus 的渲染器，请下载安装:</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus --save</span><br></pre></td></tr></table></figure><h3 id="站点配置"><a href="#站点配置" class="headerlink" title="站点配置"></a>站点配置</h3><p>切换主题语言</p><p>修改<code>站点配置文件</code></p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span></span><br></pre></td></tr></table></figure><p>站点信息</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">君小南</span>  <span class="comment"># 标题</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">&#x27;自由一生是我全部的野心&#x27;</span>  <span class="comment"># 副标题</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">&#x27;时光不期而至，你我在此相遇&#x27;</span> <span class="comment"># 个性签名</span></span><br><span class="line"><span class="attr">keywords:</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">南浔</span>   <span class="comment"># 作者</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span>  <span class="comment"># 语言</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">&#x27;&#x27;</span>   <span class="comment"># 时区</span></span><br></pre></td></tr></table></figure><p>生成文章唯一链接</p><p>安装 hexo-abbrlink 插件</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure><p>在根目录 [项目名] 的配置文件 _config.yml 找到 permalink：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span></span><br><span class="line"><span class="comment">#修改为</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">post/:abbrlink.html</span> <span class="comment"># post为自定义前缀</span></span><br><span class="line"><span class="attr">abbrlink:</span></span><br><span class="line">   <span class="attr">alg:</span> <span class="string">crc32</span>   <span class="comment"># 算法</span></span><br><span class="line">   <span class="attr">rep:</span> <span class="string">hex</span>     <span class="comment"># 进制</span></span><br></pre></td></tr></table></figure><h3 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h3><p>菜单导航栏 </p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 目录</span></span><br><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="string">首页:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="string">归档:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-archive</span></span><br><span class="line">  <span class="string">标签:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="string">分类:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-folder-open</span></span><br><span class="line">  <span class="string">更多||fas</span> <span class="attr">fa-list:</span></span><br><span class="line">    <span class="attr">Music:</span> <span class="string">/music/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-music</span></span><br><span class="line">    <span class="attr">Movie:</span> <span class="string">/movies/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-video</span></span><br></pre></td></tr></table></figure><p>字数统计</p><blockquote><p>安装统计插件</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-wordcount --save or yarn add hexo-wordcount</span><br></pre></td></tr></table></figure><blockquote><p>开启统计</p></blockquote><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">wordcount:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">post_wordcount:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">min2read:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">total_wordcount:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure><p>分享功能</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 分享</span></span><br><span class="line"><span class="attr">share:</span></span><br><span class="line">  <span class="comment"># Choose: sharejs / addtoany</span></span><br><span class="line">  <span class="comment"># Leave it empty if you don&#x27;t need share</span></span><br><span class="line">  <span class="attr">use:</span> <span class="string">sharejs</span>  </span><br><span class="line"></span><br><span class="line">  <span class="comment"># Share.js</span></span><br><span class="line">  <span class="comment"># https://github.com/overtrue/share.js</span></span><br><span class="line">  <span class="attr">sharejs:</span></span><br><span class="line">    <span class="attr">sites:</span> <span class="string">facebook,twitter,wechat,weibo,qq</span>   <span class="comment">#想要显示的内容</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># AddToAny</span></span><br><span class="line">  <span class="comment"># https://www.addtoany.com/</span></span><br><span class="line">  <span class="attr">addtoany:</span></span><br><span class="line">    <span class="attr">item:</span> <span class="string">facebook,twitter,wechat,sina_weibo,facebook_messenger,email,copy_link</span></span><br></pre></td></tr></table></figure><p>鼠标点击特效</p><blockquote><p>enable 设置成 true 就可以</p></blockquote><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 烟花特效</span></span><br><span class="line"><span class="attr">fireworks:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">zIndex:</span> <span class="number">9999</span></span><br><span class="line">  <span class="attr">mobile:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 点击出现爱心</span></span><br><span class="line"><span class="attr">click_heart:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">mobile:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 鼠标点击效果文字</span></span><br><span class="line"><span class="attr">clickShowText:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">text:</span></span><br><span class="line">    <span class="comment"># - I</span></span><br><span class="line">    <span class="comment"># - LOVE</span></span><br><span class="line">    <span class="comment"># - YOU</span></span><br><span class="line">  <span class="attr">fontSize:</span> <span class="string">15px</span></span><br><span class="line">  <span class="attr">random:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">mobile:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure><p>背景特效</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 静态彩带</span></span><br><span class="line"><span class="attr">canvas_ribbon:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">size:</span> <span class="number">150</span></span><br><span class="line">  <span class="attr">alpha:</span> <span class="number">0.6</span></span><br><span class="line">  <span class="attr">zIndex:</span> <span class="number">-1</span></span><br><span class="line">  <span class="attr">click_to_change:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">mobile:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 动态彩带</span></span><br><span class="line"><span class="attr">canvas_fluttering_ribbon:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">mobile:</span> <span class="literal">false</span> <span class="comment"># false 手机端不显示 true 手机端显示</span></span><br></pre></td></tr></table></figure><p>添加看板娘</p><blockquote><p>安装插件</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure><blockquote><p>通过npm下载对应的模型</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install live2d-widget-model-tororo <span class="comment">#对应的模型</span></span><br></pre></td></tr></table></figure><blockquote><p>配置里面添加</p></blockquote><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 看板娘</span></span><br><span class="line"><span class="attr">live2d:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span> <span class="comment">#是否显示看板娘</span></span><br><span class="line">    <span class="attr">scriptFrom:</span> <span class="string">local</span></span><br><span class="line">    <span class="attr">model:</span></span><br><span class="line">        <span class="attr">use:</span> <span class="string">live2d-widget-model-tororo</span> <span class="comment">#需要与前面安装的模型名称相同，直接更换名字即可</span></span><br><span class="line">    <span class="attr">display:</span></span><br><span class="line">        <span class="attr">position:</span> <span class="string">left</span> <span class="comment">#宽高以及位置自己看着调</span></span><br><span class="line">        <span class="attr">width:</span> <span class="number">200</span></span><br><span class="line">        <span class="attr">height:</span> <span class="number">300</span></span><br><span class="line">    <span class="attr">mobile:</span></span><br><span class="line">        <span class="attr">show:</span> <span class="literal">true</span> <span class="comment">#是否在手机进行显示</span></span><br></pre></td></tr></table></figure><p>更多模型</p><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://blog.csdn.net/wang_123_zy/article/details/87181892</span><br></pre></td></tr></table></figure><p>页脚渐变</p><blockquote><p> 新建  source&#x2F;css&#x2F;footer.css</p></blockquote><p>footer.css</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 页脚footer */</span></span><br><span class="line"><span class="comment">/* 渐变色滚动动画 */</span></span><br><span class="line"><span class="keyword">@-webkit-keyframes</span> Gradient &#123;</span><br><span class="line">    <span class="number">0%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">50%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">100%</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">100%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@-moz-keyframes</span> Gradient &#123;</span><br><span class="line">    <span class="number">0%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">50%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">100%</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">100%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@keyframes</span> Gradient &#123;</span><br><span class="line">    <span class="number">0%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">50%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">100%</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">100%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#footer</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(-<span class="number">45deg</span>, <span class="number">#ee7752</span>, <span class="number">#ce3e75</span>, <span class="number">#23a6d5</span>, <span class="number">#23d5ab</span>);</span><br><span class="line">    <span class="attribute">background-size</span>: <span class="number">400%</span> <span class="number">400%</span>;</span><br><span class="line">    -webkit-<span class="attribute">animation</span>: Gradient <span class="number">10s</span> ease infinite;</span><br><span class="line">    -moz-<span class="attribute">animation</span>: Gradient <span class="number">10s</span> ease infinite;</span><br><span class="line">    <span class="attribute">animation</span>: Gradient <span class="number">10s</span> ease infinite;</span><br><span class="line">    -o-user-<span class="selector-tag">select</span>: none;</span><br><span class="line">    -ms-user-<span class="selector-tag">select</span>: none;</span><br><span class="line">    -webkit-user-<span class="selector-tag">select</span>: none;</span><br><span class="line">    -moz-user-<span class="selector-tag">select</span>: none;</span><br><span class="line">    user-<span class="selector-tag">select</span>: none;</span><br><span class="line">    <span class="attribute">border-top-left-radius</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">border-top-right-radius</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#footer</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>修改配置文件</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 插入代码到头部 &lt;/head&gt; 之前 和 底部 &lt;/body&gt; 之前</span></span><br><span class="line"><span class="attr">inject:</span></span><br><span class="line">  <span class="attr">head:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/css/footer.css&quot;&gt;</span>  <span class="comment"># 渐变页脚</span></span><br><span class="line">  <span class="attr">bottom:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&#x27;&lt;div class=&quot;aplayer no-destroy&quot; data-id=&quot;464916877&quot; data-server=&quot;netease&quot; data-type=&quot;song&quot; data-fixed=&quot;true&quot; data-autoplay=&quot;true&quot;&gt; &lt;/div&gt;&#x27;</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
       <categories>
-        <category>Hexo</category>
+          
+          <category> Hexo </category>
+          
       </categories>
-      <tags>
-        <tag>Butterfly</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Butterfly的三个特殊menu</title>
-    <url>/hyq/4612a9d4.html</url>
-    <content><![CDATA[<blockquote>
-<p>三个 Page Front-matter【必需】要配置 type 的 (标签、分类、友链)</p>
-</blockquote>
-<h3 id="tags标签页"><a href="#tags标签页" class="headerlink" title="tags标签页"></a>tags标签页</h3><p>创建</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure>
-
-<p>&#x2F;tags&#x2F;index.md 配置</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">title: tags</span><br><span class="line">date: 2024-10-13 17:30:47</span><br><span class="line">type: &quot;tags&quot;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>type 类型必须为 tags</p>
-</blockquote>
-<h3 id="categories分类页"><a href="#categories分类页" class="headerlink" title="categories分类页"></a>categories分类页</h3><p>创建</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
-
-<p>&#x2F;categories&#x2F;index.md 配置</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">title: categories</span><br><span class="line">date: 2024-10-13 16:46:30</span><br><span class="line">type: &quot;categories&quot;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>type 类型必须为 categories</p>
-</blockquote>
-<h3 id="link友链页"><a href="#link友链页" class="headerlink" title="link友链页"></a>link友链页</h3><p>创建</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page <span class="built_in">link</span></span><br></pre></td></tr></table></figure>
-
-<p>&#x2F;link&#x2F;index.md 配置</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">title: link</span><br><span class="line">date: 2024-10-12 23:20:38</span><br><span class="line">type: &quot;link&quot;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>type 类型必须为 link</p>
-</blockquote>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> Butterfly </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/hyq/4a17b156.html"/>
+      <url>/hyq/4a17b156.html</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
       <categories>
-        <category>Hexo</category>
+          
+          <category> Hexo </category>
+          
       </categories>
-      <tags>
-        <tag>Butterfly</tag>
-      </tags>
-  </entry>
+      
+      
+    </entry>
+    
+    
+  
+  
 </search>
