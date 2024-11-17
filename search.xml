@@ -1266,7 +1266,7 @@
 <li>使用原则：不到万不得已不要轻易动用</li>
 </ul>
 <p>Redux 工作流程</p>
-<img src="200.png" />
+<img src="/img/200.png" />
 
 <ul>
 <li>组件想操作 Redux 中的状态：把动作类型和数据告诉 <code>Action Creators</code></li>
