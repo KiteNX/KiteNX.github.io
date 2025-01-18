@@ -1,0 +1,1195 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>uniapp | 南浔-小破站</title><meta name="author" content="南浔"><meta name="copyright" content="南浔"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="安装HBuilderX下载地址：https:&#x2F;&#x2F;www.dcloud.io&#x2F;hbuilderx.html HBuilderX，Windows为zip包，解压后才能使用  首先，选中下载的zip包，点击右键菜单，点击解压到当前文件夹 进入解压后的文件夹，找到HBuilderX.exe，直接点击打开    创建桌面快捷方式   uniapp 环境搭建创建 uniapp 项目     运行到浏览器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="uniapp">
+<meta property="og:url" content="http://example.com/hyq/bc2ee5a9.html">
+<meta property="og:site_name" content="南浔-小破站">
+<meta property="og:description" content="安装HBuilderX下载地址：https:&#x2F;&#x2F;www.dcloud.io&#x2F;hbuilderx.html HBuilderX，Windows为zip包，解压后才能使用  首先，选中下载的zip包，点击右键菜单，点击解压到当前文件夹 进入解压后的文件夹，找到HBuilderX.exe，直接点击打开    创建桌面快捷方式   uniapp 环境搭建创建 uniapp 项目     运行到浏览器">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/Butterfly.png">
+<meta property="article:published_time" content="2025-01-18T11:25:50.000Z">
+<meta property="article:modified_time" content="2025-01-18T11:32:00.058Z">
+<meta property="article:author" content="南浔">
+<meta property="article:tag" content="vue3">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/Butterfly.png"><link rel="shortcut icon" href="/img/avatar.jpg"><link rel="canonical" href="http://example.com/hyq/bc2ee5a9.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        if (name && globalFn[key][name]) return
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":true,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: {"chs_to_cht":"已切换为繁体中文","cht_to_chs":"已切换为简体中文","day_to_night":"已切换为深色模式","night_to_day":"已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-right"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'uniapp',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-01-18 19:32:00'
+}</script><link rel="stylesheet" href="/css/background.css"><link rel="stylesheet" href="/css/scroll.css"><div id="myscoll"></div><meta name="generator" content="Hexo 7.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load', preloader.endLoading)
+
+  if (true) {
+    btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init')
+    btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
+  }
+})()</script><div id="web_bg" style="background-color: #efefef;"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group hide"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-solid fa-image"></i><span> Gallery</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/Butterfly.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">南浔-小破站</span></a><a class="nav-page-title" href="/"><span class="site-name">uniapp</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group hide"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-solid fa-image"></i><span> Gallery</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">uniapp</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-01-18T11:25:50.000Z" title="发表于 2025-01-18 19:25:50">2025-01-18</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-01-18T11:32:00.058Z" title="更新于 2025-01-18 19:32:00">2025-01-18</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Web/">Web</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">7.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>33分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="安装HBuilderX"><a href="#安装HBuilderX" class="headerlink" title="安装HBuilderX"></a>安装HBuilderX</h1><p>下载地址：<a target="_blank" rel="noopener" href="https://www.dcloud.io/hbuilderx.html">https://www.dcloud.io/hbuilderx.html</a></p>
+<p>HBuilderX，Windows为zip包，解压后才能使用</p>
+<ol>
+<li>首先，选中下载的zip包，点击<code>右键菜单</code>，点击<code>解压到当前文件夹</code></li>
+<li>进入解压后的文件夹，找到HBuilderX.exe，直接点击打开</li>
+</ol>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/install_windows.png" />
+
+<p>创建桌面快捷方式</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/create_shortcut.png" />
+
+<h1 id="uniapp-环境搭建"><a href="#uniapp-环境搭建" class="headerlink" title="uniapp 环境搭建"></a>uniapp 环境搭建</h1><p>创建 uniapp 项目</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/820.png" />
+
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/024.png" />
+
+<p>运行到浏览器</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/340.png" />
+
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/437.png" />
+
+<h1 id="项目的结构目录"><a href="#项目的结构目录" class="headerlink" title="项目的结构目录"></a>项目的结构目录</h1><blockquote>
+<p>官方文档：<a target="_blank" rel="noopener" href="https://uniapp.dcloud.net.cn/tutorial/project.html#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84">https://uniapp.dcloud.net.cn/tutorial/project.html#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84</a></p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">├─pages                 业务页面文件存放的目录</span><br><span class="line">│  ├─index</span><br><span class="line">│  │  └─index.vue       index页面</span><br><span class="line">│  └─list</span><br><span class="line">│     └─list.vue        list页面</span><br><span class="line">├─static                存放应用引用的本地静态资源（如图片、视频等）的目录，注意：静态资源只能存放于此</span><br><span class="line">├─unpackage             非工程代码，一般存放运行或发行的编译结果</span><br><span class="line">├─main.js               Vue初始化入口文件</span><br><span class="line">├─App.vue               应用配置，用来配置App全局样式以及监听 应用生命周期</span><br><span class="line">├─manifest.json         配置应用名称、appid、logo、版本等打包信息，详见</span><br><span class="line">├─pages.json            配置页面路由、导航条、选项卡等页面类信息，详见</span><br><span class="line">└─uni.scss              这里是uni-app内置的常用样式变量 </span><br></pre></td></tr></table></figure>
+
+<h1 id="创建和配置页面"><a href="#创建和配置页面" class="headerlink" title="创建和配置页面"></a>创建和配置页面</h1><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/045.png" />
+
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/123.png" />
+
+<p>list.vue 页面</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;view&gt;</span><br><span class="line">		list页面</span><br><span class="line">	&lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script setup&gt;</span><br><span class="line">	</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang=&quot;scss&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>page.json文件中查看配置</p>
+<blockquote>
+<p>注意：<strong>pages数组中第一项表示应用启动页</strong></p>
+</blockquote>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">	<span class="attr">&quot;pages&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span> <span class="comment">//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages</span></span><br><span class="line">		<span class="punctuation">&#123;</span></span><br><span class="line">			<span class="attr">&quot;path&quot;</span><span class="punctuation">:</span> <span class="string">&quot;pages/list/list&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="attr">&quot;style&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">				<span class="attr">&quot;navigationBarTitleText&quot;</span><span class="punctuation">:</span> <span class="string">&quot;文章列表&quot;</span><span class="punctuation">,</span></span><br><span class="line">				<span class="attr">&quot;enablePullDownRefresh&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span></span><br><span class="line">			<span class="punctuation">&#125;</span></span><br><span class="line">		<span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">		<span class="punctuation">&#123;</span></span><br><span class="line">			<span class="attr">&quot;path&quot;</span><span class="punctuation">:</span> <span class="string">&quot;pages/index/index&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="attr">&quot;style&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">				<span class="attr">&quot;navigationBarTitleText&quot;</span><span class="punctuation">:</span> <span class="string">&quot;uni-app&quot;</span></span><br><span class="line">			<span class="punctuation">&#125;</span></span><br><span class="line">		<span class="punctuation">&#125;</span></span><br><span class="line">	<span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">	<span class="attr">&quot;globalStyle&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">		<span class="attr">&quot;navigationBarTextStyle&quot;</span><span class="punctuation">:</span> <span class="string">&quot;black&quot;</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;navigationBarTitleText&quot;</span><span class="punctuation">:</span> <span class="string">&quot;uni-app&quot;</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;navigationBarBackgroundColor&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#F8F8F8&quot;</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;backgroundColor&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#F8F8F8&quot;</span></span><br><span class="line">	<span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">	<span class="attr">&quot;uniIdRouter&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>浏览器查看测试结果</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/734.png" />
+
+<h1 id="globalStyle全局配置"><a href="#globalStyle全局配置" class="headerlink" title="globalStyle全局配置"></a>globalStyle全局配置</h1><blockquote>
+<p><code>page.json</code>文件中 <code>globalStyle</code> 节点</p>
+<p>用于设置应用的状态栏、导航条、标题、窗口背景色等</p>
+<p>更多属性配置可以参考文档：<a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/collocation/pages.html#globalstyle">https://uniapp.dcloud.io/collocation/pages.html#globalstyle</a></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>默认值</th>
+<th>描述</th>
+<th>平台差异说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>navigationBarBackgroundColor</td>
+<td>HexColor</td>
+<td>#F7F7F7</td>
+<td>导航栏背景颜色（同状态栏背景色）</td>
+<td>APP与H5为#F7F7F7，小程序平台请参考相应小程序文档</td>
+</tr>
+<tr>
+<td>navigationBarTextStyle</td>
+<td>String</td>
+<td>white</td>
+<td>导航栏标题颜色及状态栏前景颜色，仅支持 black&#x2F;white</td>
+<td></td>
+</tr>
+<tr>
+<td>navigationBarTitleText</td>
+<td>String</td>
+<td></td>
+<td>导航栏标题文字内容</td>
+<td></td>
+</tr>
+<tr>
+<td>navigationStyle</td>
+<td>String</td>
+<td>default</td>
+<td>导航栏样式，仅支持 default&#x2F;custom。custom即取消默认的原生导航栏，需看<a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/collocation/pages#customnav">使用注意</a></td>
+<td>微信小程序 7.0+、百度小程序、H5、App（2.0.3+）</td>
+</tr>
+<tr>
+<td>backgroundColor</td>
+<td>HexColor</td>
+<td>#ffffff</td>
+<td>下拉显示出来的窗口的背景色</td>
+<td>微信小程序</td>
+</tr>
+<tr>
+<td>backgroundTextStyle</td>
+<td>String</td>
+<td>dark</td>
+<td>下拉 loading 的样式，仅支持 dark &#x2F; light</td>
+<td>微信小程序</td>
+</tr>
+<tr>
+<td>enablePullDownRefresh</td>
+<td>Boolean</td>
+<td>false</td>
+<td>是否开启下拉刷新，详见<a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/tutorial/page.html#lifecycle">页面生命周期</a>。</td>
+<td></td>
+</tr>
+<tr>
+<td>onReachBottomDistance</td>
+<td>Number</td>
+<td>50</td>
+<td>页面上拉触底事件触发时距页面底部距离，单位只支持px，详见<a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/tutorial/page.html#lifecycle">页面生命周期</a></td>
+<td></td>
+</tr>
+</tbody></table>
+<h1 id="视图容器"><a href="#视图容器" class="headerlink" title="视图容器"></a>视图容器</h1><h2 id="view组件"><a href="#view组件" class="headerlink" title="view组件"></a>view组件</h2><p>文档：<a target="_blank" rel="noopener" href="https://uniapp.dcloud.net.cn/component/view.html">https://uniapp.dcloud.net.cn/component/view.html</a></p>
+<p>视图容器</p>
+<p>它类似于传统html中的div，用于包裹各种元素内容。</p>
+<p>如果使用<a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/tutorial/nvue-outline">nvue</a>，则需注意，包裹文字应该使用<code>&lt;text&gt;</code>组件</p>
+<table>
+<thead>
+<tr>
+<th align="left">属性名</th>
+<th align="left">类型</th>
+<th align="left">默认值</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">hover-class</td>
+<td align="left">String</td>
+<td align="left">none</td>
+<td align="left">指定按下去的样式类。当 hover-class&#x3D;”none” 时，没有点击态效果</td>
+</tr>
+<tr>
+<td align="left">hover-stop-propagation</td>
+<td align="left">Boolean</td>
+<td align="left">false</td>
+<td align="left">指定是否阻止本节点的祖先节点出现点击态，App、H5、支付宝小程序、百度小程序不支持（支付宝小程序、百度小程序文档中都有此属性，实测未支持）</td>
+</tr>
+<tr>
+<td align="left">hover-start-time</td>
+<td align="left">Number</td>
+<td align="left">50</td>
+<td align="left">按住后多久出现点击态，单位毫秒</td>
+</tr>
+<tr>
+<td align="left">hover-stay-time</td>
+<td align="left">Number</td>
+<td align="left">400</td>
+<td align="left">手指松开后点击态保留时间，单位毫秒</td>
+</tr>
+</tbody></table>
+<h2 id="scroll-view组件"><a href="#scroll-view组件" class="headerlink" title="scroll-view组件"></a>scroll-view组件</h2><p>文档：<a target="_blank" rel="noopener" href="https://uniapp.dcloud.net.cn/component/scroll-view.html">https://uniapp.dcloud.net.cn/component/scroll-view.html</a></p>
+<p>可滚动视图区域。用于区域滚动。</p>
+<p>需注意在webview渲染的页面中，区域滚动的性能不及页面滚动</p>
+<table>
+<thead>
+<tr>
+<th align="left">属性名</th>
+<th align="left">类型</th>
+<th align="left">默认值</th>
+<th align="left">说明</th>
+<th align="left">平台差异说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">scroll-x</td>
+<td align="left">Boolean</td>
+<td align="left">false</td>
+<td align="left">允许横向滚动</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">scroll-y</td>
+<td align="left">Boolean</td>
+<td align="left">false</td>
+<td align="left">允许纵向滚动</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">upper-threshold</td>
+<td align="left">Number&#x2F;String</td>
+<td align="left">50</td>
+<td align="left">距顶部&#x2F;左边多远时（单位px），触发 scrolltoupper 事件</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">lower-threshold</td>
+<td align="left">Number&#x2F;String</td>
+<td align="left">50</td>
+<td align="left">距底部&#x2F;右边多远时（单位px），触发 scrolltolower 事件</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">scroll-top</td>
+<td align="left">Number&#x2F;String</td>
+<td align="left"></td>
+<td align="left">设置竖向滚动条位置</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;view class=&quot;content&quot;&gt;</span><br><span class="line">		&lt;scroll-view class=&quot;scroll&quot; scroll-x scroll-y&gt;</span><br><span class="line">			&lt;view class=&quot;group&quot;&gt;</span><br><span class="line">				&lt;view class=&quot;item&quot;&gt;</span><br><span class="line">					杂志</span><br><span class="line">				&lt;/view&gt;</span><br><span class="line"></span><br><span class="line">				&lt;view class=&quot;item&quot;&gt;</span><br><span class="line">					新闻</span><br><span class="line">				&lt;/view&gt;</span><br><span class="line"></span><br><span class="line">				&lt;view class=&quot;item&quot;&gt;</span><br><span class="line">					报刊</span><br><span class="line">				&lt;/view&gt;</span><br><span class="line"></span><br><span class="line">				&lt;view class=&quot;item&quot;&gt;</span><br><span class="line">					玄幻</span><br><span class="line">				&lt;/view&gt;</span><br><span class="line"></span><br><span class="line">				&lt;view class=&quot;item&quot;&gt;</span><br><span class="line">					灵异</span><br><span class="line">				&lt;/view&gt;</span><br><span class="line">			&lt;/view&gt;</span><br><span class="line">		&lt;/scroll-view&gt;</span><br><span class="line">		&lt;scroll-view class=&quot;scroll-view_H&quot; scroll-x scroll-left=&quot;120&quot;&gt;</span><br><span class="line">			&lt;view id=&quot;demo1&quot; class=&quot;scroll-view-item_H uni-bg-red&quot;&gt;杂志&lt;/view&gt;</span><br><span class="line">			&lt;view id=&quot;demo2&quot; class=&quot;scroll-view-item_H uni-bg-green&quot;&gt;新闻&lt;/view&gt;</span><br><span class="line">			&lt;view id=&quot;demo3&quot; class=&quot;scroll-view-item_H uni-bg-blue&quot;&gt;报刊&lt;/view&gt;</span><br><span class="line">		&lt;/scroll-view&gt;</span><br><span class="line">	&lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script setup&gt;</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang=&quot;scss&quot;&gt;</span><br><span class="line">	.scroll &#123;</span><br><span class="line">		border: 1px solid red;</span><br><span class="line">		box-sizing: border-box;</span><br><span class="line">		height: 220rpx;</span><br><span class="line">		height: 100rpx;</span><br><span class="line"></span><br><span class="line">		.group &#123;</span><br><span class="line">			white-space: nowrap;</span><br><span class="line"></span><br><span class="line">			.item &#123;</span><br><span class="line">				width: 220rpx;</span><br><span class="line">				height: 220rpx;</span><br><span class="line">				background: royalblue;</span><br><span class="line">				display: inline-block;</span><br><span class="line">				margin-right: 10rpx;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	.scroll-view_H &#123;</span><br><span class="line">		white-space: nowrap;</span><br><span class="line">		width: 100%;</span><br><span class="line"></span><br><span class="line">		.scroll-view-item_H &#123;</span><br><span class="line">			display: inline-block;</span><br><span class="line">			width: 100%;</span><br><span class="line">			height: 300rpx;</span><br><span class="line">			line-height: 300rpx;</span><br><span class="line">			text-align: center;</span><br><span class="line">			font-size: 36rpx;</span><br><span class="line">		&#125;</span><br><span class="line">		.uni-bg-red&#123;</span><br><span class="line">			background-color: red;</span><br><span class="line">		&#125;</span><br><span class="line">		.uni-bg-green&#123;</span><br><span class="line">			background-color: green;</span><br><span class="line">		&#125;</span><br><span class="line">		.uni-bg-blue&#123;</span><br><span class="line">			background-color: blue;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="swiper组件"><a href="#swiper组件" class="headerlink" title="swiper组件"></a>swiper组件</h2><p>文档：<a target="_blank" rel="noopener" href="https://uniapp.dcloud.net.cn/component/swiper.html">https://uniapp.dcloud.net.cn/component/swiper.html</a></p>
+<p>滑块视图容器。</p>
+<p>一般用于左右滑动或上下滑动，比如banner轮播图。</p>
+<p>注意滑动切换和滚动的区别，滑动切换是一屏一屏的切换。swiper下的每个swiper-item是一个滑动切换区域，不能停留在2个滑动区域之间</p>
+<table>
+<thead>
+<tr>
+<th align="left">属性名</th>
+<th align="left">类型</th>
+<th align="left">默认值</th>
+<th align="left">说明</th>
+<th align="left">平台差异说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">indicator-dots</td>
+<td align="left">Boolean</td>
+<td align="left">false</td>
+<td align="left">是否显示面板指示点</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">indicator-color</td>
+<td align="left">Color</td>
+<td align="left">rgba(0, 0, 0, .3)</td>
+<td align="left">指示点颜色</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">indicator-active-color</td>
+<td align="left">Color</td>
+<td align="left">#000000</td>
+<td align="left">当前选中的指示点颜色</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">autoplay</td>
+<td align="left">Boolean</td>
+<td align="left">false</td>
+<td align="left">是否自动切换</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">current</td>
+<td align="left">Number</td>
+<td align="left">0</td>
+<td align="left">当前所在滑块的 index</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">interval</td>
+<td align="left">Number</td>
+<td align="left">5000</td>
+<td align="left">自动切换时间间隔</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">duration</td>
+<td align="left">Number</td>
+<td align="left">500</td>
+<td align="left">滑动动画时长</td>
+<td align="left">app-nvue不支持</td>
+</tr>
+<tr>
+<td align="left">circular</td>
+<td align="left">Boolean</td>
+<td align="left">false</td>
+<td align="left">是否采用衔接滑动，即播放到末尾后重新回到开头</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">vertical</td>
+<td align="left">Boolean</td>
+<td align="left">false</td>
+<td align="left">滑动方向是否为纵向</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;view class=&quot;content&quot;&gt;</span><br><span class="line">		&lt;view class=&quot;uni-margin-wrap&quot;&gt;</span><br><span class="line">			&lt;swiper class=&quot;swiper&quot; circular indicator-dots indicator-active-color=&quot;#fff&quot;  autoplay interval=&quot;2000&quot;</span><br><span class="line">				duration=&quot;1000&quot;&gt;</span><br><span class="line">				&lt;swiper-item&gt;</span><br><span class="line">					&lt;view class=&quot;swiper-item uni-bg-red&quot;&gt;杂志&lt;/view&gt;</span><br><span class="line">				&lt;/swiper-item&gt;</span><br><span class="line">				&lt;swiper-item&gt;</span><br><span class="line">					&lt;view class=&quot;swiper-item uni-bg-green&quot;&gt;新闻&lt;/view&gt;</span><br><span class="line">				&lt;/swiper-item&gt;</span><br><span class="line">				&lt;swiper-item&gt;</span><br><span class="line">					&lt;view class=&quot;swiper-item uni-bg-blue&quot;&gt;报刊&lt;/view&gt;</span><br><span class="line">				&lt;/swiper-item&gt;</span><br><span class="line">			&lt;/swiper&gt;</span><br><span class="line">		&lt;/view&gt;</span><br><span class="line">	&lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script setup&gt;</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang=&quot;scss&quot;&gt;</span><br><span class="line">	.uni-margin-wrap &#123;</span><br><span class="line">		width: 690rpx;</span><br><span class="line">		width: 100%;</span><br><span class="line"></span><br><span class="line">		.swiper &#123;</span><br><span class="line">			height: 300rpx;</span><br><span class="line"></span><br><span class="line">			.swiper-item &#123;</span><br><span class="line">				display: block;</span><br><span class="line">				height: 300rpx;</span><br><span class="line">				line-height: 300rpx;</span><br><span class="line">				text-align: center;</span><br><span class="line">			&#125;</span><br><span class="line">			.uni-bg-red &#123;</span><br><span class="line">				background-color: red;</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">			.uni-bg-green &#123;</span><br><span class="line">				background-color: green;</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">			.uni-bg-blue &#123;</span><br><span class="line">				background-color: blue;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="媒体组件"><a href="#媒体组件" class="headerlink" title="媒体组件"></a>媒体组件</h1><h2 id="image组件"><a href="#image组件" class="headerlink" title="image组件"></a>image组件</h2><p>文档：<a target="_blank" rel="noopener" href="https://uniapp.dcloud.net.cn/component/image.html">https://uniapp.dcloud.net.cn/component/image.html</a></p>
+<p>图片组件</p>
+<table>
+<thead>
+<tr>
+<th align="left">属性名</th>
+<th align="left">类型</th>
+<th align="left">默认值</th>
+<th align="left">说明</th>
+<th align="left">平台差异说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">src</td>
+<td align="left">String</td>
+<td align="left"></td>
+<td align="left">图片资源地址</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">mode</td>
+<td align="left">String</td>
+<td align="left">‘scaleToFill’</td>
+<td align="left">图片裁剪、缩放的模式</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>mode 有效值： mode 有 14 种模式，其中 5 种是缩放模式，9 种是裁剪模式</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;view class=&quot;content&quot;&gt;</span><br><span class="line">		&lt;image style=&quot;width: 200px; height: 200px; background-color: #eeeeee;&quot; :mode=&quot;mode&quot; :src=&quot;src&quot;</span><br><span class="line">			&gt;&lt;/image&gt;</span><br><span class="line">	&lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script setup&gt;</span><br><span class="line">	const mode = &#x27;scaleToFill&#x27;</span><br><span class="line">	const src = &#x27;https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/shuijiao.jpg&#x27;</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang=&quot;scss&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="video组件"><a href="#video组件" class="headerlink" title="video组件"></a>video组件</h2><p>文档：<a target="_blank" rel="noopener" href="https://uniapp.dcloud.net.cn/component/video.html">https://uniapp.dcloud.net.cn/component/video.html</a></p>
+<p>视频播放组件</p>
+<table>
+<thead>
+<tr>
+<th align="left">属性名</th>
+<th align="left">类型</th>
+<th align="left">默认值</th>
+<th align="left">说明</th>
+<th align="left">平台差异说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">src</td>
+<td align="left">String</td>
+<td align="left"></td>
+<td align="left">要播放视频的资源地址</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">autoplay</td>
+<td align="left">Boolean</td>
+<td align="left">false</td>
+<td align="left">是否自动播放</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">loop</td>
+<td align="left">Boolean</td>
+<td align="left">false</td>
+<td align="left">是否循环播放</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">muted</td>
+<td align="left">Boolean</td>
+<td align="left">false</td>
+<td align="left">是否静音播放</td>
+<td align="left">飞书小程序不支持</td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;view class=&quot;content&quot;&gt;</span><br><span class="line">		&lt;video class=&quot;myVideo&quot; src=&quot;https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/2minute-demo.mp4&quot; enable-danmu</span><br><span class="line">			danmu-btn controls&gt;&lt;/video&gt;</span><br><span class="line">	&lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script setup&gt;</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang=&quot;scss&quot;&gt;</span><br><span class="line">	.myVideo&#123;</span><br><span class="line">		width: 100%;</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="表单组件"><a href="#表单组件" class="headerlink" title="表单组件"></a>表单组件</h1><h2 id="button组件"><a href="#button组件" class="headerlink" title="button组件"></a>button组件</h2><p>文档：<a target="_blank" rel="noopener" href="https://uniapp.dcloud.net.cn/component/button.html">https://uniapp.dcloud.net.cn/component/button.html</a></p>
+<p>按钮组件</p>
+<table>
+<thead>
+<tr>
+<th>属性名</th>
+<th>类型</th>
+<th>默认值</th>
+<th>说明</th>
+<th>平台差异说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>size</td>
+<td>String</td>
+<td>default</td>
+<td>按钮的大小</td>
+<td></td>
+</tr>
+<tr>
+<td>type</td>
+<td>String</td>
+<td>default</td>
+<td>按钮的样式类型</td>
+<td></td>
+</tr>
+<tr>
+<td>plain</td>
+<td>Boolean</td>
+<td>false</td>
+<td>按钮是否镂空，背景色透明</td>
+<td></td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>Boolean</td>
+<td>false</td>
+<td>是否禁用</td>
+<td></td>
+</tr>
+<tr>
+<td>loading</td>
+<td>Boolean</td>
+<td>false</td>
+<td>名称前是否带 loading 图标</td>
+<td>H5、App(App-nvue 平台，在 ios 上为雪花，Android上为圆圈)</td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;view class=&quot;content&quot;&gt;</span><br><span class="line">		&lt;button&gt;默认按钮&lt;/button&gt;</span><br><span class="line">		&lt;button size=&quot;mini&quot;&gt;mini按钮&lt;/button&gt;</span><br><span class="line">		&lt;button type=&quot;primary&quot;&gt;type=primary按钮&lt;/button&gt;</span><br><span class="line">		&lt;button type=&quot;primary&quot; plain&gt;type=primary的镂空按钮&lt;/button&gt;</span><br><span class="line">		&lt;button type=&quot;primary&quot; disabled&gt;type=primary的禁用按钮&lt;/button&gt;</span><br><span class="line">		&lt;button type=&quot;primary&quot; loading&gt;type=primary的loading按钮&lt;/button&gt;</span><br><span class="line">	&lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script setup&gt;</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang=&quot;scss&quot;&gt;</span><br><span class="line">	</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="navigator组件"><a href="#navigator组件" class="headerlink" title="navigator组件"></a>navigator组件</h1><p>文档：<a target="_blank" rel="noopener" href="https://uniapp.dcloud.net.cn/component/navigator.html#navigator">https://uniapp.dcloud.net.cn/component/navigator.html#navigator</a></p>
+<p>页面跳转。</p>
+<p>该组件类似HTML中的<code>&lt;a&gt;</code>组件，但只能跳转本地页面。目标页面必须在pages.json中注册</p>
+<table>
+<thead>
+<tr>
+<th align="left">属性名</th>
+<th align="left">类型</th>
+<th align="left">默认值</th>
+<th align="left">说明</th>
+<th align="left">平台差异说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">url</td>
+<td align="left">String</td>
+<td align="left"></td>
+<td align="left">应用内的跳转链接，值为相对路径或绝对路径，如：”..&#x2F;first&#x2F;first”，”&#x2F;pages&#x2F;first&#x2F;first”，注意不能加 <code>.vue</code> 后缀</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">open-type</td>
+<td align="left">String</td>
+<td align="left">navigate</td>
+<td align="left">跳转方式</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<p><strong>open-type 有效值</strong></p>
+<p>文档：<a target="_blank" rel="noopener" href="https://uniapp.dcloud.net.cn/api/router?id=navigateto">https://uniapp.dcloud.net.cn/api/router?id=navigateto</a></p>
+<table>
+<thead>
+<tr>
+<th align="left">值</th>
+<th align="left">说明</th>
+<th align="left">平台差异说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">navigate</td>
+<td align="left">对应 uni.navigateTo 的功能</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">redirect</td>
+<td align="left">对应 uni.redirectTo 的功能</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">switchTab</td>
+<td align="left">对应 uni.switchTab 的功能</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">reLaunch</td>
+<td align="left">对应 uni.reLaunch 的功能</td>
+<td align="left">抖音小程序与飞书小程序不支持</td>
+</tr>
+<tr>
+<td align="left">navigateBack</td>
+<td align="left">对应 uni.navigateBack 的功能</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">exit</td>
+<td align="left">退出小程序，target&#x3D;”miniProgram”时生效</td>
+<td align="left">微信2.1.0+、百度2.5.2+、QQ1.4.7+</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>注意：</p>
+<ul>
+<li>跳转tabbar页面，必须设置open-type&#x3D;”switchTab”</li>
+<li>navigator-hover 默认为 {background-color: rgba(0, 0, 0, 0.1); opacity: 0.7;}, <code>&lt;navigator&gt;</code> 的子节点背景色应为透明色。</li>
+<li>navigator-<code>open-type</code>属性 如果使用对应的值，则对应值的功能会高于对应跳转路径。</li>
+<li>app-nvue 平台只有纯nvue项目（render为native）才支持 <code>&lt;navigator&gt;</code>。非render为native的情况下，nvue暂不支持navigator组件，请使用API跳转。</li>
+<li>app下退出应用，Android平台可以使用<a target="_blank" rel="noopener" href="https://www.html5plus.org/doc/zh_cn/runtime.html#plus.runtime.quit">plus.runtime.quit</a>。iOS没有退出应用的概念。</li>
+<li><a target="_blank" rel="noopener" href="https://ext.dcloud.net.cn/plugin?id=1182">uLink组件</a>是navigator组件的增强版，样式上自带下划线，功能上支持打开在线网页、其他App的schema、mailto发邮件、tel打电话。</li>
+<li>Vue3 项目因 SSR 需要，H5 端会在外层嵌套 a 标签</li>
+</ul>
+</blockquote>
+<h1 id="编程式导航"><a href="#编程式导航" class="headerlink" title="编程式导航"></a>编程式导航</h1><p>文档：<a target="_blank" rel="noopener" href="https://uniapp.dcloud.net.cn/api/router.html">https://uniapp.dcloud.net.cn/api/router.html</a></p>
+<ul>
+<li>uni.navigateTo</li>
+<li>uni.redirectTo</li>
+<li>uni.switchTab</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;view&gt;</span><br><span class="line">    &lt;navigator url=&quot;/pages/test01/test01&quot;&gt;跳转到测试页(带返回按钮)&lt;/navigator&gt;</span><br><span class="line">    &lt;navigator url=&quot;/pages/test01/test01&quot; open-type=&quot;redirect&quot;&gt;跳转到测试页redirect(不带返回按钮)&lt;/navigator&gt;</span><br><span class="line">    &lt;navigator url=&quot;/pages/index/index&quot; open-type=&quot;switchTab&quot;&gt;跳转到tabbar的首页&lt;/navigator&gt;</span><br><span class="line">      </span><br><span class="line">    &lt;!-- 编程式导航 和上面三个是对应的 --&gt;</span><br><span class="line">	&lt;!-- 使用点击事件跳转 --&gt;</span><br><span class="line">    &lt;button type=&quot;primary&quot; @click=&quot;routerNavigate&quot;&gt;跳转到测试页(带返回按钮)&lt;/button&gt;</span><br><span class="line">    &lt;button type=&quot;primary&quot; @click=&quot;routerRedirect&quot;&gt;跳转到测试页(不带返回按钮)&lt;/button&gt;</span><br><span class="line">    &lt;button type=&quot;primary&quot; @click=&quot;routerSwichtab&quot;&gt;到tabbar的首页&lt;/button&gt;</span><br><span class="line">  &lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script setup&gt;</span><br><span class="line">import &#123; ref &#125; from &#x27;vue&#x27;;</span><br><span class="line"></span><br><span class="line">// 定义导航方法</span><br><span class="line">const routerNavigate = () =&gt; &#123;</span><br><span class="line">  uni.navigateTo(&#123;</span><br><span class="line">    url: &#x27;/pages/test01/test01&#x27;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">const routerRedirect = () =&gt; &#123;</span><br><span class="line">  uni.redirectTo(&#123;</span><br><span class="line">    url: &#x27;/pages/test01/test01&#x27;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">const routerSwichtab = () =&gt; &#123;</span><br><span class="line">  uni.switchTab(&#123;</span><br><span class="line">    url: &#x27;/pages/index/index&#x27;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang=&quot;scss&quot;&gt;</span><br><span class="line">/* 样式部分 */</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="tabBar-配置"><a href="#tabBar-配置" class="headerlink" title="tabBar 配置"></a>tabBar 配置</h1><p>文档：<a target="_blank" rel="noopener" href="https://uniapp.dcloud.net.cn/collocation/pages.html#tabbar">https://uniapp.dcloud.net.cn/collocation/pages.html#tabbar</a></p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>必填</th>
+<th>默认值</th>
+<th>描述</th>
+<th>平台差异说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>color</td>
+<td>HexColor</td>
+<td>是</td>
+<td></td>
+<td>tab 上的文字默认颜色</td>
+<td></td>
+</tr>
+<tr>
+<td>selectedColor</td>
+<td>HexColor</td>
+<td>是</td>
+<td></td>
+<td>tab 上的文字选中时的颜色</td>
+<td></td>
+</tr>
+<tr>
+<td>backgroundColor</td>
+<td>HexColor</td>
+<td>是</td>
+<td></td>
+<td>tab 的背景色</td>
+<td></td>
+</tr>
+<tr>
+<td>borderStyle</td>
+<td>String</td>
+<td>否</td>
+<td>black</td>
+<td>tabbar 上边框的颜色，可选值 black&#x2F;white</td>
+<td>App 2.3.4+ 支持其他颜色值、H5 3.0.0+</td>
+</tr>
+<tr>
+<td>blurEffect</td>
+<td>String</td>
+<td>否</td>
+<td>none</td>
+<td>iOS 高斯模糊效果，可选值 dark&#x2F;extralight&#x2F;light&#x2F;none（参考:<a target="_blank" rel="noopener" href="https://ask.dcloud.net.cn/article/36617">使用说明 (opens new window)</a>）</td>
+<td>App 2.4.0+ 支持、H5 3.0.0+（只有最新版浏览器才支持）</td>
+</tr>
+<tr>
+<td>list</td>
+<td>Array</td>
+<td>是</td>
+<td></td>
+<td>tab 的列表，详见 list 属性说明，最少2个、最多5个 tab</td>
+<td></td>
+</tr>
+<tr>
+<td>position</td>
+<td>String</td>
+<td>否</td>
+<td>bottom</td>
+<td>可选值 bottom、top</td>
+<td>top 值仅微信小程序支持</td>
+</tr>
+</tbody></table>
+<p>创建页面 (每次创建页面都要在<strong>pages.json中的pages节点下配置路径</strong>)</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/828.png" />
+
+<p>将图片拷贝的静态文件夹，有选中的图片和不选中的图片</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/244.png" />
+
+<p>page.json中配置一下tabbar</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;tabBar&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">	<span class="attr">&quot;color&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#333&quot;</span><span class="punctuation">,</span></span><br><span class="line">	<span class="attr">&quot;selectedColor&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#015FF9&quot;</span><span class="punctuation">,</span></span><br><span class="line">	<span class="attr">&quot;list&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">&#123;</span></span><br><span class="line">		<span class="attr">&quot;text&quot;</span><span class="punctuation">:</span> <span class="string">&quot;首页&quot;</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;pagePath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;pages/index/index&quot;</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;iconPath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;static/images/tabbar/home.png&quot;</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;selectedIconPath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;static/images/tabbar/home-h.png&quot;</span></span><br><span class="line">	<span class="punctuation">&#125;</span><span class="punctuation">,</span> <span class="punctuation">&#123;</span></span><br><span class="line">		<span class="attr">&quot;text&quot;</span><span class="punctuation">:</span> <span class="string">&quot;列表&quot;</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;pagePath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;pages/list/list&quot;</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;iconPath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;static/images/tabbar/list.png&quot;</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;selectedIconPath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;static/images/tabbar/list-h.png&quot;</span></span><br><span class="line">	<span class="punctuation">&#125;</span><span class="punctuation">,</span> <span class="punctuation">&#123;</span></span><br><span class="line">		<span class="attr">&quot;text&quot;</span><span class="punctuation">:</span> <span class="string">&quot;我们&quot;</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;pagePath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;pages/about/about&quot;</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;iconPath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;static/images/tabbar/user.png&quot;</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;selectedIconPath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;static/images/tabbar/user-h.png&quot;</span></span><br><span class="line">	<span class="punctuation">&#125;</span><span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>然后在浏览器就可以看到效果了，点击之后可以切换到对应的界面</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/227.png" />
+
+<h1 id="自定义组件"><a href="#自定义组件" class="headerlink" title="自定义组件"></a>自定义组件</h1><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/241.png" />
+
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/212.png" />
+
+<p>在 vue-component 目录下新建一个 vue 文件 ，名字可以随便取 比如：vue3Setup.vue</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/2214.png" />
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- vue3Setup.vue --&gt;</span><br><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;view&gt;</span><br><span class="line"></span><br><span class="line">	&lt;/view&gt;	</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script setup&gt;</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang=&quot;scss&quot; scoped&gt;</span><br><span class="line">	</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>然后再次新建组件的时候就可以选择刚刚这个自定义的组件模板</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/2220.png" />
+
+<h1 id="easycom-自动导入自定义组件"><a href="#easycom-自动导入自定义组件" class="headerlink" title="easycom 自动导入自定义组件"></a>easycom 自动导入自定义组件</h1><p>文档：<a target="_blank" rel="noopener" href="https://uniapp.dcloud.net.cn/component/#easycom">组件使用的入门教程 | uni-app官网</a></p>
+<blockquote>
+<p>如果扩展组件符合uni-app的 <code>easycom</code> 组件规范，则可以免注册，直接使用。比如 uni-ui 扩展组件就符合<code>easycom </code>组件规范。</p>
+<p>如果组件不符合 easycom 规范，则需要在代码里手动 import 和注册组件，然后才能使用</p>
+</blockquote>
+<h2 id="easycom组件规范"><a href="#easycom组件规范" class="headerlink" title="easycom组件规范"></a>easycom组件规范</h2><blockquote>
+<p><code>HBuilderX 2.5.5</code>起支持</p>
+</blockquote>
+<p>传统 vue 组件，需要安装、引用、注册，三个步骤后才能使用组件。<code>easycom</code>将其精简为一步。</p>
+<p>只要组件安装在项目的 components 目录下或 <code>uni_modules </code>目录下，并符合 <code>components/组件名称/组件名称.(vue|uvue) </code>目录结构（注意：当同时存在 vue 和 uvue 时，uni-app 项目优先使用 vue 文件，而uni-app x 项目优先使用 uvue 文件，<a target="_blank" rel="noopener" href="https://doc.dcloud.net.cn/uni-app-x/component/#%E5%A6%82%E4%BD%95%E5%BC%80%E5%8F%91%E5%90%8C%E6%97%B6%E5%85%BC%E5%AE%B9-uni-app-x-%E5%92%8C-uni-app-%E7%9A%84%E7%BB%84%E4%BB%B6">详情</a>） 就可以不用引用、注册，直接在页面中使用</p>
+<p><code>easycom</code>是自动开启的，不需要手动开启</p>
+<p>如果你的组件名称或路径不符合easycom的默认规范，可以在<code>pages.json</code>的<code>easycom</code>节点进行个性化设置，自定义匹配组件的策略。<a target="_blank" rel="noopener" href="https://uniapp.dcloud.net.cn/collocation/pages#easycom">另见</a></p>
+<h2 id="创建组件"><a href="#创建组件" class="headerlink" title="创建组件"></a>创建组件</h2><p>先创建  components  目录 –&gt;右键选择 创建组件</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/134.png" />
+
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/119.png" />
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;div class=&quot;form-container&quot;&gt;</span><br><span class="line">		&lt;form @submit=&quot;onSubmit&quot;&gt;</span><br><span class="line">			&lt;div class=&quot;row&quot;&gt;</span><br><span class="line">				&lt;input type=&quot;text&quot; name=&quot;username&quot; placeholder=&quot;请输入用户名&quot; /&gt;</span><br><span class="line">			&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">			&lt;div class=&quot;row&quot;&gt;</span><br><span class="line">				&lt;textarea name=&quot;content&quot; placeholder=&quot;请输入内容&quot;&gt;&lt;/textarea&gt;</span><br><span class="line">			&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">			&lt;div class=&quot;row&quot;&gt;</span><br><span class="line">				&lt;view class=&quot;radioList&quot;&gt;</span><br><span class="line">					&lt;label&gt;性别：&lt;/label&gt;</span><br><span class="line">					&lt;radio-group name=&quot;gender&quot;&gt;</span><br><span class="line">						&lt;label&gt;</span><br><span class="line">							&lt;radio value=&quot;男&quot; /&gt;男</span><br><span class="line">						&lt;/label&gt;</span><br><span class="line">						&lt;label&gt;</span><br><span class="line">							&lt;radio value=&quot;女&quot; /&gt;女</span><br><span class="line">						&lt;/label&gt;</span><br><span class="line">						&lt;label&gt;</span><br><span class="line">							&lt;radio value=&quot;保密&quot; checked /&gt;保密</span><br><span class="line">						&lt;/label&gt;</span><br><span class="line">					&lt;/radio-group&gt;</span><br><span class="line">				&lt;/view&gt;</span><br><span class="line">			&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">			&lt;div class=&quot;row&quot;&gt;</span><br><span class="line">				&lt;picker :range=&quot;options&quot; name=&quot;school&quot; :value=&quot;selectValue&quot; @change=&quot;pickerChange&quot;&gt;</span><br><span class="line">					&lt;view&gt;点击选择学历：&#123;&#123; options[selectValue] &#125;&#125;&lt;/view&gt;</span><br><span class="line">				&lt;/picker&gt;</span><br><span class="line">			&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">			&lt;div class=&quot;row&quot;&gt;</span><br><span class="line">				&lt;button form-type=&quot;submit&quot; type=&quot;primary&quot;&gt;提交表单&lt;/button&gt;</span><br><span class="line">				&lt;button form-type=&quot;reset&quot; type=&quot;default&quot;&gt;重置表单&lt;/button&gt;</span><br><span class="line">			&lt;/div&gt;</span><br><span class="line">		&lt;/form&gt;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script setup&gt;</span><br><span class="line">	import &#123;</span><br><span class="line">		ref</span><br><span class="line">	&#125; from &#x27;vue&#x27;;</span><br><span class="line"></span><br><span class="line">	const obj = ref(&#123;&#125;);</span><br><span class="line">	const options = [&quot;高中&quot;, &quot;大专&quot;, &quot;本科&quot;, &quot;博士&quot;];</span><br><span class="line">	const selectValue = ref(2);</span><br><span class="line"></span><br><span class="line">	const onSubmit = (e) =&gt; &#123;</span><br><span class="line">		obj.value = e.detail.value;</span><br><span class="line">		obj.value.school = options[selectValue.value];</span><br><span class="line">		console.log(obj.value);</span><br><span class="line">	&#125;;</span><br><span class="line"></span><br><span class="line">	const pickerChange = (e) =&gt; &#123;</span><br><span class="line">		selectValue.value = e.detail.value;</span><br><span class="line">	&#125;;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang=&quot;scss&quot;&gt;</span><br><span class="line">	.form-container &#123;</span><br><span class="line">		display: flex;</span><br><span class="line">		justify-content: center;</span><br><span class="line">		align-items: center;</span><br><span class="line">		// height: 100vh; /* 使容器占满整个视口高度 */</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	form &#123;</span><br><span class="line">		width: 100%;</span><br><span class="line">		padding: 20rpx;</span><br><span class="line">		margin: 20rpx;</span><br><span class="line">		border: 1px solid #ccc;</span><br><span class="line">		border-radius: 10rpx;</span><br><span class="line">		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	.row &#123;</span><br><span class="line">		margin-bottom: 15px;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	input &#123;</span><br><span class="line">		height: 2.5rem;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	input,</span><br><span class="line">	textarea &#123;</span><br><span class="line">		border: 1px solid #eee;</span><br><span class="line">		width: 100%;</span><br><span class="line">		padding: 20rpx;</span><br><span class="line">		box-sizing: border-box;</span><br><span class="line">		border-radius: 8rpx;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	textarea &#123;</span><br><span class="line">		resize: vertical;</span><br><span class="line">	&#125;</span><br><span class="line">	.radioList&#123;</span><br><span class="line">		display: flex;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	button &#123;</span><br><span class="line">		padding: 6rpx 20rpx;</span><br><span class="line">		margin: 10rpx 0;</span><br><span class="line">		border: none;</span><br><span class="line">		border-radius: 8rpx;</span><br><span class="line">		cursor: pointer;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	button[type=&quot;primary&quot;] &#123;</span><br><span class="line">		background-color: #409EFF;</span><br><span class="line">		color: white;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	button[type=&quot;default&quot;] &#123;</span><br><span class="line">		background-color: #ccc;</span><br><span class="line">		color: black;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	button[type=&quot;primary&quot;]:hover &#123;</span><br><span class="line">		background-color: #66b1ff;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	button[type=&quot;default&quot;]:hover &#123;</span><br><span class="line">		background-color: #ddd;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	label &#123;</span><br><span class="line">		display: block;</span><br><span class="line">		margin-bottom: 5px;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	radio-group &#123;</span><br><span class="line">		display: flex;</span><br><span class="line">		gap: 20rpx;</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在页面中使用组件</p>
+<blockquote>
+<p>注意在使用组件的使用 组件的命名有两种 <code>&lt;my-component-name&gt;</code> 和 <code>&lt;MyComponentName&gt;</code> 都是一样的  </p>
+<p>一个是使用短横线分隔命名 还有一个是使用驼峰命名 </p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;view&gt;</span><br><span class="line">		&lt;componentA&gt;&lt;/componentA&gt;</span><br><span class="line">	&lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script setup&gt;</span><br><span class="line">	</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang=&quot;scss&quot;&gt;</span><br><span class="line">	</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>测试效果</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/114.png" />
+
+<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">│─components            符合vue组件规范的uni-app组件目录</span><br><span class="line">│  └─componentA         符合‘components/组件名称/组件名称.vue’目录结构，easycom方式可直接使用组件</span><br><span class="line">│  	  └─componentA.vue  可复用的componentA组件</span><br><span class="line">│  └─componentB</span><br><span class="line">|     └─componentB.vue  可复用的componentB组件</span><br></pre></td></tr></table></figure>
+
+<h1 id="Props-传值-父传子"><a href="#Props-传值-父传子" class="headerlink" title="Props 传值 (父传子)"></a>Props 传值 (父传子)</h1><p>定义一个标题组件 pubTitle ，通过给这个组件传递不同的值 在每个页面显示的数据不一样</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;view class=&quot;pubTitle&quot;&gt;</span><br><span class="line">		&lt;view class=&quot;big&quot;&gt;&#123;&#123;title&#125;&#125;&lt;/view&gt;</span><br><span class="line">		&lt;view class=&quot;small&quot;&gt;&#123;&#123;subtitle&#125;&#125;&lt;/view&gt;</span><br><span class="line">		&lt;view class=&quot;line&quot;&gt;&lt;/view&gt;</span><br><span class="line">	&lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script setup&gt;</span><br><span class="line">	const props = defineProps(&#123;</span><br><span class="line">		title: &#123;</span><br><span class="line">			type: String,</span><br><span class="line">			default: &quot;默认标题&quot;</span><br><span class="line">		&#125;,</span><br><span class="line">		subtitle: &#123;</span><br><span class="line">			type: String,</span><br><span class="line">			default: &quot;默认副标题&quot;</span><br><span class="line">		&#125;,</span><br><span class="line">	&#125;)</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang=&quot;scss&quot;&gt;</span><br><span class="line">.pubTitle&#123; </span><br><span class="line">	padding:60rpx 30rpx;</span><br><span class="line">	text-align: center;</span><br><span class="line">	background: #B9EDF8;</span><br><span class="line">	.big&#123; </span><br><span class="line">		font-size: 50rpx;</span><br><span class="line">		font-weight: 600;</span><br><span class="line">		color:#1F6ED4;</span><br><span class="line">	&#125;</span><br><span class="line">	.small&#123; </span><br><span class="line">		font-size: 28rpx;</span><br><span class="line">		color:#39BAE8;</span><br><span class="line">	&#125;</span><br><span class="line">	.line&#123; </span><br><span class="line">		display: inline-block;</span><br><span class="line">		width: 100rpx;</span><br><span class="line">		height: 10rpx;</span><br><span class="line">		background: #0000A1;</span><br><span class="line">		border-radius: 10rpx;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>如果不传递值的话会有默认值 default，<code>不同的数据类型会有不同的默认值</code></p>
+<blockquote>
+<p>注意 数组 和 对象 的默认值写法</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> props = <span class="title function_">defineProps</span>(&#123;</span><br><span class="line">    <span class="attr">title</span>: &#123;</span><br><span class="line">        <span class="attr">type</span>: <span class="title class_">String</span>,</span><br><span class="line">        <span class="attr">default</span>: <span class="string">&quot;默认标题&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">subtitle</span>: &#123;</span><br><span class="line">        <span class="attr">type</span>: <span class="title class_">String</span>,</span><br><span class="line">        <span class="attr">default</span>: <span class="string">&quot;默认副标题&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">time</span>: &#123;</span><br><span class="line">        <span class="attr">type</span>: <span class="title class_">Number</span>,</span><br><span class="line">        <span class="attr">default</span>: <span class="title class_">Date</span>.<span class="title function_">now</span>()</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">list</span>: &#123;</span><br><span class="line">        <span class="attr">type</span>: <span class="title class_">Array</span>,</span><br><span class="line">        <span class="title function_">default</span> () &#123;</span><br><span class="line">            <span class="keyword">return</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">user</span>: &#123;</span><br><span class="line">        <span class="attr">type</span>: <span class="title class_">Object</span>,</span><br><span class="line">        <span class="title function_">default</span> () &#123;</span><br><span class="line">            <span class="keyword">return</span> &#123;</span><br><span class="line">                <span class="attr">name</span>: <span class="string">&quot;匿名&quot;</span>,</span><br><span class="line">                <span class="attr">gender</span>: <span class="string">&quot;保密&quot;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>调用组件 pubTitle 并传值 </p>
+<blockquote>
+<p>因为是在首页调用的 所以传递的值是 title&#x3D;”首页” subtitle&#x3D;”index page”</p>
+<p>如果在列表页调用 可以在传递自己想要的值 比如： title&#x3D;”列表” subtitle&#x3D;”list page”</p>
+<p>这个是也可以通过 js 动态传值 <code>:title=&#39;name&#39;</code></p>
+<p><code>不同的页面调用 可以传递不同的值 达到组件复用的效果</code></p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;view class=&quot;content&quot;&gt;</span><br><span class="line">		&lt;view class=&quot;text-area&quot;&gt;</span><br><span class="line">			&lt;!-- 传递的值是固定的 --&gt;</span><br><span class="line">			&lt;!-- &lt;pubTitle title=&quot;首页&quot; subtitle=&quot;index page&quot; /&gt; --&gt;</span><br><span class="line">			&lt;!-- 动态传值 --&gt;</span><br><span class="line">			&lt;pubTitle :title=&#x27;name&#x27; subtitle=&quot;index page&quot; /&gt;</span><br><span class="line">		&lt;/view&gt;</span><br><span class="line">	&lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script setup&gt;</span><br><span class="line">	const name = &#x27;首页！！&#x27;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang=&quot;scss&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>展示效果</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/112.png" />
+
+<h1 id="emit-传值-子传父"><a href="#emit-传值-子传父" class="headerlink" title="emit 传值 (子传父)"></a>emit 传值 (子传父)</h1><p>创建一个组件 myEvent 作为子组件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;view&gt;</span><br><span class="line">		&lt;input type=&quot;text&quot; placeholder=&quot;请输入...&quot; @input=&quot;onInput&quot;&gt;</span><br><span class="line">	&lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script setup&gt;</span><br><span class="line">	const emit = defineEmits([&quot;myenv&quot;]);</span><br><span class="line">	const onInput = (e) =&gt; &#123;</span><br><span class="line">		emit(&quot;myenv&quot;, &#123;</span><br><span class="line">			value: e.detail.value,</span><br><span class="line">		&#125;)</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang=&quot;scss&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>定义一个自定义事件 myenv  在 onInput 方法中调用 自定义事件向父组件以对象的形式传递数据 </p>
+</blockquote>
+<p>父组件调用子组件 myEvent </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;view class=&quot;content&quot;&gt;</span><br><span class="line">		&lt;view class=&quot;text-area&quot;&gt;</span><br><span class="line">			&lt;myEvent @myenv=&quot;onMyenv&quot;&gt;&lt;/myEvent&gt;</span><br><span class="line">		&lt;/view&gt;</span><br><span class="line">	&lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script setup&gt;</span><br><span class="line">	const onMyenv = (e) =&gt; &#123;</span><br><span class="line">		console.log(e)</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang=&quot;scss&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>在调用子组件的时候 将 onMyenv 方法绑定到子组件自定义的方法 myenv 上面 在 onMyenv 方法里面接收子组件传递过来的值</p>
+</blockquote>
+<p>效果展示</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/103.png" />
+
+<h1 id="应用和页面的生命周期函数"><a href="#应用和页面的生命周期函数" class="headerlink" title="应用和页面的生命周期函数"></a>应用和页面的生命周期函数</h1><h2 id="应用的生命周期函数-App-vue-文件"><a href="#应用的生命周期函数-App-vue-文件" class="headerlink" title="应用的生命周期函数 App.vue 文件"></a>应用的生命周期函数 App.vue 文件</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">	export default &#123;</span><br><span class="line">		onLaunch: function() &#123;</span><br><span class="line">			console.log(&#x27;App Launch 页面加载完毕（只执行一次）&#x27;)</span><br><span class="line">		&#125;,</span><br><span class="line">		onShow: function() &#123;</span><br><span class="line">			console.log(&#x27;App Show 页面显示&#x27;)</span><br><span class="line">		&#125;,</span><br><span class="line">		onHide: function() &#123;</span><br><span class="line">			console.log(&#x27;App Hide 页面隐藏&#x27;)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">	/*每个页面公共css */</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="页面生命周期函数"><a href="#页面生命周期函数" class="headerlink" title="页面生命周期函数"></a>页面生命周期函数</h2><p>文档：<a target="_blank" rel="noopener" href="https://uniapp.dcloud.net.cn/tutorial/page.html#lifecycle">https://uniapp.dcloud.net.cn/tutorial/page.html#lifecycle</a></p>
+<table>
+<thead>
+<tr>
+<th>函数名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>onLoad</td>
+<td>监听页面加载，其参数为上个页面传递的数据，参数类型为 Object（用于页面传参），参考<a target="_blank" rel="noopener" href="https://uniapp.dcloud.net.cn/api/router#navigateto">示例</a></td>
+</tr>
+<tr>
+<td>onShow</td>
+<td>监听页面显示。页面每次出现在屏幕上都触发，包括从下级页面点返回露出当前页面</td>
+</tr>
+<tr>
+<td>onReady</td>
+<td>监听页面初次渲染完成。注意如果渲染速度快，会在页面进入动画完成前触发</td>
+</tr>
+<tr>
+<td>onHide</td>
+<td>监听页面隐藏</td>
+</tr>
+</tbody></table>
+<h1 id="组件的生命周期函数"><a href="#组件的生命周期函数" class="headerlink" title="组件的生命周期函数"></a>组件的生命周期函数</h1><blockquote>
+<p>和 vue3 的生命周期一样</p>
+</blockquote>
+<ul>
+<li><code>onBeforeMount</code>：在挂载开始之前被调用</li>
+<li><code>onMounted</code>：在挂载完成后被调用</li>
+<li><code>onUnmounted</code>：在组件卸载后被调用</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;view&gt;</span><br><span class="line">		组件</span><br><span class="line">	&lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script setup&gt;</span><br><span class="line">	import &#123; onBeforeMount, onMounted, onUnmounted &#125; from &#x27;vue&#x27;;</span><br><span class="line">	onBeforeMount(() =&gt; &#123;</span><br><span class="line">	 console.log(&#x27;beforeCreate...&#x27;)</span><br><span class="line">	&#125;);</span><br><span class="line">	</span><br><span class="line">	onMounted(() =&gt; &#123;</span><br><span class="line">	  console.log(&#x27;created&#x27;) //页面渲染完毕</span><br><span class="line">	  console.log(&#x27;beforeMount&#x27;)</span><br><span class="line">	  console.log(&#x27;mounted&#x27;) //dom挂载完毕</span><br><span class="line">	&#125;);</span><br><span class="line">	</span><br><span class="line">	onUnmounted(() =&gt; &#123;</span><br><span class="line">	  console.log(&#x27;destroyed&#x27;) //页面销毁</span><br><span class="line">	&#125;);</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang=&quot;scss&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="uni-showToast-消息提示框"><a href="#uni-showToast-消息提示框" class="headerlink" title="uni.showToast 消息提示框"></a>uni.showToast 消息提示框</h1><p>文档：<a target="_blank" rel="noopener" href="https://uniapp.dcloud.net.cn/api/ui/prompt.html#showtoast">https://uniapp.dcloud.net.cn/api/ui/prompt.html#showtoast</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;view class=&quot;content&quot;&gt;</span><br><span class="line">		&lt;image class=&quot;logo&quot; src=&quot;/static/logo.png&quot; @click=&quot;clickImg&quot;&gt;&lt;/image&gt;</span><br><span class="line">	&lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script setup&gt;</span><br><span class="line">	const clickImg = () =&gt; &#123;</span><br><span class="line">        // icon 图标: success error none</span><br><span class="line">		uni.showToast(&#123;</span><br><span class="line">			title: &quot;操作成功&quot;,</span><br><span class="line">			icon: &quot;none&quot;,</span><br><span class="line">			mask: true</span><br><span class="line">		&#125;)</span><br><span class="line"></span><br><span class="line">		setTimeout(() =&gt; &#123;</span><br><span class="line">			uni.navigateTo(&#123;</span><br><span class="line">				url: &quot;/pages/test01/test01&quot;</span><br><span class="line">			&#125;)</span><br><span class="line">		&#125;, 1500)</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang=&quot;scss&quot;&gt;</span><br><span class="line">	</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="uni-showModal-模态弹窗"><a href="#uni-showModal-模态弹窗" class="headerlink" title="uni.showModal 模态弹窗"></a>uni.showModal 模态弹窗</h1><p>文档：<a target="_blank" rel="noopener" href="https://uniapp.dcloud.net.cn/api/ui/prompt.html#showmodal">https://uniapp.dcloud.net.cn/api/ui/prompt.html#showmodal</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;view class=&quot;content&quot;&gt;</span><br><span class="line">		&lt;image class=&quot;logo&quot; src=&quot;/static/logo.png&quot; @click=&quot;clickBox&quot;&gt;&lt;/image&gt;</span><br><span class="line">	&lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script setup&gt;</span><br><span class="line">	const clickBox = () =&gt; &#123;</span><br><span class="line">		// uni.showModal(&#123;</span><br><span class="line">		// 	title: &quot;手机验证&quot;,</span><br><span class="line">		// 	success: res =&gt; &#123;</span><br><span class="line">		// 		console.log(res)</span><br><span class="line">		// 		if (res.confirm) &#123;</span><br><span class="line">		// 			uni.navigateTo(&#123;</span><br><span class="line">		// 				url: &quot;/pages/test01/test01&quot;</span><br><span class="line">		// 			&#125;)</span><br><span class="line">		// 		&#125; else &#123;</span><br><span class="line">		// 			uni.showToast(&#123;</span><br><span class="line">		// 				title: &quot;取消&quot;,</span><br><span class="line">		// 				icon: &quot;none&quot;</span><br><span class="line">		// 			&#125;)</span><br><span class="line">		// 		&#125;</span><br><span class="line">		// 	&#125;</span><br><span class="line">		// &#125;)</span><br><span class="line"></span><br><span class="line">		uni.showModal(&#123;</span><br><span class="line">			title: &quot;手机验证&quot;,</span><br><span class="line">			editable: true,</span><br><span class="line">			placeholderText: &quot;请输入手机号&quot;,</span><br><span class="line">			success: res =&gt; &#123;</span><br><span class="line">				console.log(res)</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;)</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang=&quot;scss&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>效果展示</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/215.png" />
+
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/248.png" />
+
+<h1 id="uni-showActionSheet"><a href="#uni-showActionSheet" class="headerlink" title="uni.showActionSheet"></a>uni.showActionSheet</h1><p>文档：<a target="_blank" rel="noopener" href="https://uniapp.dcloud.net.cn/api/ui/prompt.html#showactionsheet">https://uniapp.dcloud.net.cn/api/ui/prompt.html#showactionsheet</a></p>
+<p>从底部向上弹出操作菜单</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;view class=&quot;content&quot;&gt;</span><br><span class="line">		&lt;image class=&quot;logo&quot; src=&quot;/static/logo.png&quot; @click=&quot;clickAction&quot;&gt;&lt;/image&gt;</span><br><span class="line">	&lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script setup&gt;</span><br><span class="line">	import &#123; ref &#125; from &#x27;vue&#x27;;</span><br><span class="line">	const arr = ref([&quot;三国演义&quot;, &quot;西游记&quot;, &quot;红楼梦&quot;, &quot;水浒传&quot;]);</span><br><span class="line">	const clickAction = () =&gt; &#123;</span><br><span class="line">		uni.showActionSheet(&#123;</span><br><span class="line">			itemList: arr.value,</span><br><span class="line">			success: (res) =&gt; &#123;</span><br><span class="line">				console.log(arr.value[res.tapIndex])</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;);</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang=&quot;scss&quot;&gt;</span><br><span class="line">	</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>效果展示</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/225.png" />
+
+<h1 id="界面设置导航条"><a href="#界面设置导航条" class="headerlink" title="界面设置导航条"></a>界面设置导航条</h1><p>文档：<a target="_blank" rel="noopener" href="https://uniapp.dcloud.net.cn/api/ui/navigationbar.html">https://uniapp.dcloud.net.cn/api/ui/navigationbar.html</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;view&gt;</span><br><span class="line">		</span><br><span class="line">	&lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script setup&gt;</span><br><span class="line">	import &#123;</span><br><span class="line">		onMounted</span><br><span class="line">	&#125; from &#x27;vue&#x27;;</span><br><span class="line">	onMounted(() =&gt; &#123;</span><br><span class="line">		uni.setNavigationBarTitle(&#123;</span><br><span class="line">			title: &quot;详情title&quot;</span><br><span class="line">		&#125;)</span><br><span class="line"></span><br><span class="line">		uni.setNavigationBarColor(&#123;</span><br><span class="line">			backgroundColor: &quot;#1AA034&quot;,</span><br><span class="line">			frontColor: &quot;#ffffff&quot;</span><br><span class="line">		&#125;)</span><br><span class="line"></span><br><span class="line">		// 	uni.showNavigationBarLoading();</span><br><span class="line"></span><br><span class="line">		// 	setTimeout(() =&gt; &#123;</span><br><span class="line">		// 		uni.hideNavigationBarLoading()</span><br><span class="line">		// 	&#125;, 1500)</span><br><span class="line">	&#125;);</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang=&quot;scss&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>参数说明</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">类型</th>
+<th align="left">必填</th>
+<th align="left">说明</th>
+<th align="left">平台差异说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">frontColor</td>
+<td align="left">String</td>
+<td align="left">是</td>
+<td align="left">前景颜色值，包括按钮、标题、状态栏的颜色，仅支持 #ffffff 和 #000000</td>
+<td align="left">App、H5、微信小程序、百度小程序、抖音小程序、QQ小程序、快手小程序、京东小程序</td>
+</tr>
+<tr>
+<td align="left">backgroundColor</td>
+<td align="left">String</td>
+<td align="left">是</td>
+<td align="left">背景颜色值，有效值为十六进制颜色</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<h1 id="tabbar配置iconfont字体图标"><a href="#tabbar配置iconfont字体图标" class="headerlink" title="tabbar配置iconfont字体图标"></a>tabbar配置iconfont字体图标</h1><p>iconfont 官网：<a target="_blank" rel="noopener" href="https://www.iconfont.cn/">iconfont-阿里巴巴矢量图标库</a></p>
+<p><strong>iconfont参数说明：</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">类型</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">text</td>
+<td align="left">String</td>
+<td align="left">字库 Unicode 码</td>
+</tr>
+<tr>
+<td align="left">selectedText</td>
+<td align="left">String</td>
+<td align="left">选中后字库 Unicode 码</td>
+</tr>
+<tr>
+<td align="left">fontSize</td>
+<td align="left">String</td>
+<td align="left">字体图标字号(px)</td>
+</tr>
+<tr>
+<td align="left">color</td>
+<td align="left">String</td>
+<td align="left">字体图标颜色</td>
+</tr>
+<tr>
+<td align="left">selectedColor</td>
+<td align="left">String</td>
+<td align="left">字体图标选中颜色</td>
+</tr>
+</tbody></table>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/247.png" />
+
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/617.png" />
+
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/128.png" />
+
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/222.png" />
+
+<p>复制 iconfont.ttf 这个文件到  static &#x2F;font 目录下</p>
+<blockquote>
+<p>在 pages.json 中使用 </p>
+<p>先 配置 iconfontSrc 属性，引入 iconfont.ttf 这个文件</p>
+<p>直接复制 然后 把 <code>&amp;#x</code>改成 <code>\u</code>  最后去掉 <code>;</code></p>
+<p><code>&amp;#xe65d;</code> —&gt; <code>\ue65d</code></p>
+</blockquote>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/234.png" />
+
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;tabBar&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">		<span class="attr">&quot;iconfontSrc&quot;</span><span class="punctuation">:</span> <span class="string">&quot;static/font/iconfont.ttf&quot;</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;color&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#333&quot;</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;selectedColor&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#015FF9&quot;</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;list&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">&#123;</span></span><br><span class="line">			<span class="attr">&quot;text&quot;</span><span class="punctuation">:</span> <span class="string">&quot;首页&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="attr">&quot;pagePath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;pages/index/index&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="attr">&quot;iconfont&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">				<span class="attr">&quot;text&quot;</span><span class="punctuation">:</span> <span class="string">&quot;\ue65d&quot;</span><span class="punctuation">,</span></span><br><span class="line">				<span class="attr">&quot;selectedText&quot;</span><span class="punctuation">:</span> <span class="string">&quot;\ue65d&quot;</span><span class="punctuation">,</span></span><br><span class="line">				<span class="attr">&quot;color&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#333&quot;</span><span class="punctuation">,</span></span><br><span class="line">				<span class="attr">&quot;selectedColor&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#007aff&quot;</span></span><br><span class="line">			<span class="punctuation">&#125;</span></span><br><span class="line">		<span class="punctuation">&#125;</span><span class="punctuation">,</span> <span class="punctuation">&#123;</span></span><br><span class="line">			<span class="attr">&quot;text&quot;</span><span class="punctuation">:</span> <span class="string">&quot;列表&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="attr">&quot;pagePath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;pages/list/list&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="attr">&quot;iconfont&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">				<span class="attr">&quot;text&quot;</span><span class="punctuation">:</span> <span class="string">&quot;\ue65d&quot;</span><span class="punctuation">,</span></span><br><span class="line">				<span class="attr">&quot;selectedText&quot;</span><span class="punctuation">:</span> <span class="string">&quot;\ue65d&quot;</span><span class="punctuation">,</span></span><br><span class="line">				<span class="attr">&quot;color&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#333&quot;</span><span class="punctuation">,</span></span><br><span class="line">				<span class="attr">&quot;selectedColor&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#007aff&quot;</span></span><br><span class="line">			<span class="punctuation">&#125;</span></span><br><span class="line">		<span class="punctuation">&#125;</span><span class="punctuation">,</span> <span class="punctuation">&#123;</span></span><br><span class="line">			<span class="attr">&quot;text&quot;</span><span class="punctuation">:</span> <span class="string">&quot;我们&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="attr">&quot;pagePath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;pages/about/about&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="attr">&quot;iconfont&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">				<span class="attr">&quot;text&quot;</span><span class="punctuation">:</span> <span class="string">&quot;\ue65d&quot;</span><span class="punctuation">,</span></span><br><span class="line">				<span class="attr">&quot;selectedText&quot;</span><span class="punctuation">:</span> <span class="string">&quot;\ue65d&quot;</span><span class="punctuation">,</span></span><br><span class="line">				<span class="attr">&quot;color&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#333&quot;</span><span class="punctuation">,</span></span><br><span class="line">				<span class="attr">&quot;selectedColor&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#007aff&quot;</span></span><br><span class="line">			<span class="punctuation">&#125;</span></span><br><span class="line">		<span class="punctuation">&#125;</span><span class="punctuation">]</span></span><br><span class="line">	<span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/345.png" />
+
+<h1 id="uni-request-发送请求"><a href="#uni-request-发送请求" class="headerlink" title="uni.request 发送请求"></a>uni.request 发送请求</h1><p>文档：<a target="_blank" rel="noopener" href="https://uniapp.dcloud.net.cn/api/request/request.html">https://uniapp.dcloud.net.cn/api/request/request.html</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;view&gt;</span><br><span class="line">		&lt;button type=&quot;primary&quot; @click=&quot;getData&quot;&gt;发起请求&lt;/button&gt;</span><br><span class="line">		&lt;view class=&quot;row&quot; v-for=&quot;item in listArr&quot; :key=&quot;item.id&quot;&gt;</span><br><span class="line">			&lt;view class=&quot;title&quot;&gt;&#123;&#123;item.title&#125;&#125;&lt;/view&gt;</span><br><span class="line">			&lt;view class=&quot;content&quot;&gt;&#123;&#123;item.body&#125;&#125;&lt;/view&gt;</span><br><span class="line">		&lt;/view&gt;</span><br><span class="line">	&lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script setup&gt;</span><br><span class="line">	import &#123;</span><br><span class="line">		ref</span><br><span class="line">	&#125; from &#x27;vue&#x27;;</span><br><span class="line"></span><br><span class="line">	const listArr = ref([])</span><br><span class="line"></span><br><span class="line">	const getData = () =&gt; &#123;</span><br><span class="line">		uni.request(&#123;</span><br><span class="line">			url: &#x27;&quot;http://jsonplaceholder.typicode.com/posts&#x27;,</span><br><span class="line">			method: &#x27;GET&#x27;,</span><br><span class="line">			success: resp =&gt; &#123;</span><br><span class="line">				// console.log(resp)</span><br><span class="line">				listArr.value = resp.data</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;)</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;style lang=&quot;scss&quot;&gt;</span><br><span class="line">	.row &#123;</span><br><span class="line">		padding: 20rpx 0;</span><br><span class="line">		border-bottom: 1px dotted #e4e4e4;</span><br><span class="line"></span><br><span class="line">		.title &#123;</span><br><span class="line">			font-size: 36rpx;</span><br><span class="line">			padding-bottom: 15rpx;</span><br><span class="line">			color: #333;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		.content &#123;</span><br><span class="line">			font-size: 28rpx;</span><br><span class="line">			color: #888;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="数据缓存"><a href="#数据缓存" class="headerlink" title="数据缓存"></a>数据缓存</h1><p>文档：<a target="_blank" rel="noopener" href="https://uniapp.dcloud.net.cn/api/storage/storage.html">https://uniapp.dcloud.net.cn/api/storage/storage.html</a></p>
+<blockquote>
+<p>如果使用同步保存的 那么需要使用同步获取&#x2F;同步删除，反之 异步也是如此</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;view&gt;</span><br><span class="line">		&lt;button type=&quot;primary&quot; @click=&quot;saveData&quot;&gt;保存数据&lt;/button&gt;</span><br><span class="line">		&lt;button type=&quot;primary&quot; @click=&quot;getData&quot;&gt;获取数据&lt;/button&gt;</span><br><span class="line">		&lt;button type=&quot;primary&quot; @click=&quot;removeData&quot;&gt;删除某一项数据&lt;/button&gt;</span><br><span class="line">		&lt;button type=&quot;primary&quot; @click=&quot;clearData&quot;&gt;删除全部数据&lt;/button&gt;</span><br><span class="line">	&lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script setup&gt;</span><br><span class="line">	const saveData = () =&gt; &#123;</span><br><span class="line">		// 将数据存储在本地缓存中指定的 key 中，会覆盖掉原来该 key 对应的内容，这是一个异步接口</span><br><span class="line">		// uni.setStorage(&#123;</span><br><span class="line">		//     key: &#x27;id&#x27;,</span><br><span class="line">		//     data: 100,</span><br><span class="line">		//     success:resp=&gt;&#123;</span><br><span class="line">		//         console.log(&#x27;保存成功&#x27;,resp)</span><br><span class="line">		//     &#125;</span><br><span class="line">		// &#125;)</span><br><span class="line">		// 将 data 存储在本地缓存中指定的 key 中，会覆盖掉原来该 key 对应的内容，这是一个同步接口</span><br><span class="line">		uni.setStorageSync(&#x27;id&#x27;, 100)</span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">	const getData = () =&gt; &#123;</span><br><span class="line">		// 从本地缓存中异步获取指定 key 对应的内容</span><br><span class="line">		// uni.getStorage(&#123;</span><br><span class="line">		//     key: &#x27;id&#x27;,</span><br><span class="line">		//     success:resp=&gt;&#123;</span><br><span class="line">		//         console.log(&#x27;获取成功：&#x27;,resp.data)</span><br><span class="line">		//     &#125;</span><br><span class="line">		// &#125;)</span><br><span class="line">		// 从本地缓存中同步获取指定 key 对应的内容</span><br><span class="line">		let resp = uni.getStorageSync(&#x27;id&#x27;)</span><br><span class="line">		console.log(&#x27;获取成功：&#x27;, resp)</span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">	const removeData = () =&gt; &#123;</span><br><span class="line">		// 从本地缓存中异步移除指定 key</span><br><span class="line">		// uni.removeStorage(&#123;</span><br><span class="line">		//     key: &#x27;id&#x27;,</span><br><span class="line">		//     success:resp=&gt; &#123;</span><br><span class="line">		//         console.log(&#x27;删除成功&#x27;,resp)</span><br><span class="line">		//     &#125;</span><br><span class="line">		// &#125;)</span><br><span class="line">		// 从本地缓存中同步移除指定 key</span><br><span class="line">		uni.removeStorageSync(&#x27;id&#x27;)</span><br><span class="line">	&#125;</span><br><span class="line">    const clearData = () =&gt; &#123;</span><br><span class="line">		// 异步清理本地数据缓存</span><br><span class="line">		// uni.clearStorage(&#123;</span><br><span class="line">		//     success:resp=&gt; &#123;</span><br><span class="line">		//         console.log(&#x27;删除成功&#x27;,resp)</span><br><span class="line">		//     &#125;</span><br><span class="line">		// &#125;)</span><br><span class="line">		// 同步清理本地数据缓存</span><br><span class="line">		uni.clearStorageSync()</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;style lang=&quot;scss&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/193.png" />
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">南浔</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/hyq/bc2ee5a9.html">http://example.com/hyq/bc2ee5a9.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://example.com" target="_blank">南浔-小破站</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/vue3/">vue3</a></div><div class="post-share"><div class="social-share" data-image="/img/Butterfly.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="next-post pull-full" href="/hyq/74dce755.html" title="Pinia"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/Butterfly.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Pinia</div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a href="/hyq/7ba1d77a.html" title="vue3+TypeScript"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/Butterfly.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-10-26</div><div class="title">vue3+TypeScript</div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="utterances-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">南浔</div><div class="author-info-description">时光不期而至，你我在此相遇</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/KiteNX"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85HBuilderX"><span class="toc-number">1.</span> <span class="toc-text">安装HBuilderX</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#uniapp-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-number">2.</span> <span class="toc-text">uniapp 环境搭建</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%BB%93%E6%9E%84%E7%9B%AE%E5%BD%95"><span class="toc-number">3.</span> <span class="toc-text">项目的结构目录</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%92%8C%E9%85%8D%E7%BD%AE%E9%A1%B5%E9%9D%A2"><span class="toc-number">4.</span> <span class="toc-text">创建和配置页面</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#globalStyle%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE"><span class="toc-number">5.</span> <span class="toc-text">globalStyle全局配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8"><span class="toc-number">6.</span> <span class="toc-text">视图容器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#view%E7%BB%84%E4%BB%B6"><span class="toc-number">6.1.</span> <span class="toc-text">view组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#scroll-view%E7%BB%84%E4%BB%B6"><span class="toc-number">6.2.</span> <span class="toc-text">scroll-view组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#swiper%E7%BB%84%E4%BB%B6"><span class="toc-number">6.3.</span> <span class="toc-text">swiper组件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AA%92%E4%BD%93%E7%BB%84%E4%BB%B6"><span class="toc-number">7.</span> <span class="toc-text">媒体组件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#image%E7%BB%84%E4%BB%B6"><span class="toc-number">7.1.</span> <span class="toc-text">image组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#video%E7%BB%84%E4%BB%B6"><span class="toc-number">7.2.</span> <span class="toc-text">video组件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6"><span class="toc-number">8.</span> <span class="toc-text">表单组件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#button%E7%BB%84%E4%BB%B6"><span class="toc-number">8.1.</span> <span class="toc-text">button组件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#navigator%E7%BB%84%E4%BB%B6"><span class="toc-number">9.</span> <span class="toc-text">navigator组件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BC%96%E7%A8%8B%E5%BC%8F%E5%AF%BC%E8%88%AA"><span class="toc-number">10.</span> <span class="toc-text">编程式导航</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#tabBar-%E9%85%8D%E7%BD%AE"><span class="toc-number">11.</span> <span class="toc-text">tabBar 配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6"><span class="toc-number">12.</span> <span class="toc-text">自定义组件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#easycom-%E8%87%AA%E5%8A%A8%E5%AF%BC%E5%85%A5%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6"><span class="toc-number">13.</span> <span class="toc-text">easycom 自动导入自定义组件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#easycom%E7%BB%84%E4%BB%B6%E8%A7%84%E8%8C%83"><span class="toc-number">13.1.</span> <span class="toc-text">easycom组件规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E7%BB%84%E4%BB%B6"><span class="toc-number">13.2.</span> <span class="toc-text">创建组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84"><span class="toc-number">13.3.</span> <span class="toc-text">目录结构</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Props-%E4%BC%A0%E5%80%BC-%E7%88%B6%E4%BC%A0%E5%AD%90"><span class="toc-number">14.</span> <span class="toc-text">Props 传值 (父传子)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#emit-%E4%BC%A0%E5%80%BC-%E5%AD%90%E4%BC%A0%E7%88%B6"><span class="toc-number">15.</span> <span class="toc-text">emit 传值 (子传父)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E5%92%8C%E9%A1%B5%E9%9D%A2%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%87%BD%E6%95%B0"><span class="toc-number">16.</span> <span class="toc-text">应用和页面的生命周期函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%87%BD%E6%95%B0-App-vue-%E6%96%87%E4%BB%B6"><span class="toc-number">16.1.</span> <span class="toc-text">应用的生命周期函数 App.vue 文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B5%E9%9D%A2%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%87%BD%E6%95%B0"><span class="toc-number">16.2.</span> <span class="toc-text">页面生命周期函数</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%84%E4%BB%B6%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%87%BD%E6%95%B0"><span class="toc-number">17.</span> <span class="toc-text">组件的生命周期函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#uni-showToast-%E6%B6%88%E6%81%AF%E6%8F%90%E7%A4%BA%E6%A1%86"><span class="toc-number">18.</span> <span class="toc-text">uni.showToast 消息提示框</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#uni-showModal-%E6%A8%A1%E6%80%81%E5%BC%B9%E7%AA%97"><span class="toc-number">19.</span> <span class="toc-text">uni.showModal 模态弹窗</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#uni-showActionSheet"><span class="toc-number">20.</span> <span class="toc-text">uni.showActionSheet</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%95%8C%E9%9D%A2%E8%AE%BE%E7%BD%AE%E5%AF%BC%E8%88%AA%E6%9D%A1"><span class="toc-number">21.</span> <span class="toc-text">界面设置导航条</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#tabbar%E9%85%8D%E7%BD%AEiconfont%E5%AD%97%E4%BD%93%E5%9B%BE%E6%A0%87"><span class="toc-number">22.</span> <span class="toc-text">tabbar配置iconfont字体图标</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#uni-request-%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82"><span class="toc-number">23.</span> <span class="toc-text">uni.request 发送请求</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BC%93%E5%AD%98"><span class="toc-number">24.</span> <span class="toc-text">数据缓存</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/hyq/bc2ee5a9.html" title="uniapp"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/Butterfly.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="uniapp"/></a><div class="content"><a class="title" href="/hyq/bc2ee5a9.html" title="uniapp">uniapp</a><time datetime="2025-01-18T11:25:50.000Z" title="发表于 2025-01-18 19:25:50">2025-01-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/hyq/74dce755.html" title="Pinia"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/Butterfly.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Pinia"/></a><div class="content"><a class="title" href="/hyq/74dce755.html" title="Pinia">Pinia</a><time datetime="2024-12-06T12:57:41.000Z" title="发表于 2024-12-06 20:57:41">2024-12-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/hyq/d8a440d1.html" title="React"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/Butterfly.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="React"/></a><div class="content"><a class="title" href="/hyq/d8a440d1.html" title="React">React</a><time datetime="2024-10-31T13:29:45.000Z" title="发表于 2024-10-31 21:29:45">2024-10-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/hyq/7ba1d77a.html" title="vue3+TypeScript"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/Butterfly.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue3+TypeScript"/></a><div class="content"><a class="title" href="/hyq/7ba1d77a.html" title="vue3+TypeScript">vue3+TypeScript</a><time datetime="2024-10-26T12:22:31.000Z" title="发表于 2024-10-26 20:22:31">2024-10-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/hyq/4612a9d4.html" title="Butterfly的三个特殊menu"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/modb.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Butterfly的三个特殊menu"/></a><div class="content"><a class="title" href="/hyq/4612a9d4.html" title="Butterfly的三个特殊menu">Butterfly的三个特殊menu</a><time datetime="2024-10-13T10:39:07.000Z" title="发表于 2024-10-13 18:39:07">2024-10-13</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/Butterfly.png);"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By 南浔</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>(() => {
+  const getUtterancesTheme = theme => theme === 'dark' ? 'photon-dark' : 'github-light'
+
+  const loadUtterances = () => {
+    const config = Object.assign({
+      id: 'utterances_comment',
+      src: 'https://utteranc.es/client.js',
+      repo: '',
+      'issue-term': 'pathname',
+      theme: getUtterancesTheme(document.documentElement.getAttribute('data-theme')),
+      crossorigin: 'anonymous',
+      async: true
+    },null)
+
+    const ele = document.createElement('script')
+    for (let key in config) {
+      ele.setAttribute(key, config[key])
+    }
+    document.getElementById('utterances-wrap').appendChild(ele)
+  }
+
+  const changeUtterancesTheme = theme => {
+    const iframe = document.querySelector('#utterances-wrap iframe')
+    if (iframe) {
+      const message = {
+        type: 'set-theme',
+        theme: getUtterancesTheme(theme)
+      };
+      iframe.contentWindow.postMessage(message, 'https://utteranc.es')
+    }
+  }
+
+  btf.addGlobalFn('themeChange', changeUtterancesTheme, 'utterances')
+
+  if ('Utterances' === 'Utterances' || !true) {
+    if (true) btf.loadComment(document.getElementById('utterances-wrap'), loadUtterances)
+    else loadUtterances()
+  } else {
+    window.loadOtherComment = loadUtterances
+  }
+})()</script></div><script>window.newestComments = {
+  changeContent: content => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<code>.*?<\/code>/gi, '[代码]') // replace code      
+    content = content.replace(/<[^>]+>/g, "") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0, 150) + '...'
+    }
+    return content
+  },
+
+  generateHtml: (array, ele) => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class="aside-list-item">'
+
+        if (true && array[i].avatar) {
+          const imgAttr = 'data-lazy-src'
+          result += `<a href="${array[i].url}" class="thumbnail"><img ${imgAttr}="${array[i].avatar}" alt="${array[i].nick}"></a>`
+        }
+
+        result += `<div class="content">
+        <a class="comment" href="${array[i].url}" title="${array[i].content}">${array[i].content}</a>
+        <div class="name"><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '暂无评论'
+    }
+
+    ele.innerHTML = result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh(ele)
+  },
+
+  newestCommentInit: (name, getComment) => {
+    const $dom = document.querySelector('#card-newest-comments .aside-list')
+    if ($dom) {
+      const data = btf.saveToLocal.get(name)
+      if (data) {
+        newestComments.generateHtml(JSON.parse(data), $dom)
+      } else {
+        getComment($dom)
+      }
+    }
+  },
+
+  run: (name, getComment) => {
+    newestComments.newestCommentInit(name, getComment)
+    btf.addGlobalFn('pjaxComplete', () => newestComments.newestCommentInit(name, getComment), name)
+  }
+}</script><script>window.addEventListener('load', () => {
+  const keyName = 'github-newest-comments'
+  const { changeContent, generateHtml, run } = window.newestComments
+
+  const findTrueUrl = (array, ele) => {
+    Promise.all(array.map(item =>
+      fetch(item.url).then(resp => resp.json()).then(data => {
+        let urlArray = data.body ? data.body.match(/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?/ig) : []
+        if (!Array.isArray(urlArray) || urlArray.length === 0) {
+          urlArray = [`${data.html_url}`]
+        }
+        if (data.user.login === 'utterances-bot') {
+          return urlArray.pop()
+        } else {
+          return urlArray.shift()
+        }
+      })
+    )).then(res => {
+        array = array.map((i,index)=> {
+          return {
+            ...i,
+            url: res[index]
+          }
+        })
+
+        btf.saveToLocal.set(keyName, JSON.stringify(array), 10/(60*24))
+        generateHtml(array, ele)
+    });
+  }
+
+  const getComment = ele => {
+    fetch('https://api.github.com/repos//issues/comments?sort=updated&direction=desc&per_page=6&page=1',{
+      "headers": {
+        Accept: 'application/vnd.github.v3.html+json'
+      }
+    })
+      .then(response => response.json())
+      .then(data => {
+        const githubArray = data.map(item => {
+          return {
+            'avatar': item.user.avatar_url,
+            'content': changeContent(item.body_html || item.body),
+            'nick': item.user.login,
+            'url': item.issue_url,
+            'date': item.updated_at
+          }
+        })
+        findTrueUrl(githubArray, ele)
+      }).catch(e => {
+        console.error(e)
+        ele.textContent= "无法获取评论，请确认相关配置是否正确"
+      })
+  }
+  run(keyName, getComment)
+})</script><div class="aplayer no-destroy" data-id="464916877" data-server="netease" data-type="song" data-fixed="true" data-autoplay="true"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script>(() => {
+  const destroyAplayer = () => {
+    if (window.aplayers) {
+      for (let i = 0; i < window.aplayers.length; i++) {
+        if (!window.aplayers[i].options.fixed) {
+          window.aplayers[i].destroy()
+        }
+      }
+    }
+  }
+
+  const runMetingJS = () => {
+    typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+  }
+
+  btf.addGlobalFn('pjaxSend', destroyAplayer, 'destroyAplayer')
+  btf.addGlobalFn('pjaxComplete', loadMeting, 'runMetingJS')
+})()</script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>(() => {
+  const pjaxSelectors = ["link[rel=\"canonical\"]","meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => fn())
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      pjax.loadUrl('/404.html')
+    }
+  })
+})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
